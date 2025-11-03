@@ -1,0 +1,127 @@
+{
+  "name": "One Night Stand",
+  "short_name": "One Night Stand",
+  "description": "The hookup app for people who know what they want — tonight. Swipe, match, and meet in a safe and discreet space.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#FF3A8A",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["dating", "lifestyle", "social"],
+  "screenshots": [
+    {
+      "src": "/screenshots/mobile-home.png",
+      "type": "image/png",
+      "sizes": "390x844",
+      "form_factor": "narrow",
+      "label": "Home screen showing main features"
+    },
+    {
+      "src": "/screenshots/desktop-home.png", 
+      "type": "image/png",
+      "sizes": "1920x1080",
+      "form_factor": "wide",
+      "label": "Desktop view of the application"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-96x96.png", 
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128", 
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png", 
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512", 
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.continuummtechnologies.onenightstand",
+      "id": "com.continuummtechnologies.onenightstand"
+    },
+    {
+      "platform": "ios",
+      "url": "https://apps.apple.com/app/one-night-stand/id123456789",
+      "id": "123456789"
+    }
+  ],
+  "prefer_related_applications": true,
+  "shortcuts": [
+    {
+      "name": "Download App",
+      "short_name": "Download",
+      "description": "Download the One Night Stand mobile app",
+      "url": "/#download",
+      "icons": [
+        {
+          "src": "/icons/shortcut-download.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Join Waitlist",
+      "short_name": "Waitlist", 
+      "description": "Join the iOS waitlist",
+      "url": "/#waitlist",
+      "icons": [
+        {
+          "src": "/icons/shortcut-waitlist.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}
