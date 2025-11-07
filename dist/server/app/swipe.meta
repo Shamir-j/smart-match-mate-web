@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(authenticated)/layout,_N_T_/(authenticated)/swipe/layout,_N_T_/(authenticated)/swipe/page,_N_T_/swipe/"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KGF1dGhlbnRpY2F0ZWQp/swipe/__PAGE__",
+    "/!KGF1dGhlbnRpY2F0ZWQp/swipe",
+    "/!KGF1dGhlbnRpY2F0ZWQp",
+    "/_index"
+  ]
+}

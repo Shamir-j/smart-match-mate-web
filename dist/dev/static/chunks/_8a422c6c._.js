@@ -1,0 +1,1875 @@
+(globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([typeof document === "object" ? document.currentScript : undefined,
+"[project]/src/data/swipeData.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "getInitialCards",
+    ()=>getInitialCards,
+    "getRefreshCards",
+    ()=>getRefreshCards,
+    "isAd",
+    ()=>isAd,
+    "isProfile",
+    ()=>isProfile,
+    "mockAds",
+    ()=>mockAds,
+    "mockProfiles",
+    ()=>mockProfiles
+]);
+function isProfile(item) {
+    return !('type' in item && item.type === 'ad');
+}
+function isAd(item) {
+    return 'type' in item && item.type === 'ad';
+}
+const mockProfiles = [
+    {
+        id: "1",
+        name: "Emma",
+        age: 26,
+        bio: "Coffee enthusiast ☕ | Adventure seeker 🌍 | Looking for casual fun and good vibes ✨",
+        distance: 2.5,
+        images: [
+            "https://images.unsplash.com/photo-1690444963408-9573a17a8058?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFuJTIwc21pbGluZ3xlbnwxfHx8fDE3NjIxNTg2OTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+            "https://images.unsplash.com/photo-1521146764736-56c929d59c83?w=400&h=600&fit=crop"
+        ],
+        interests: [
+            "Travel",
+            "Photography",
+            "Yoga",
+            "Coffee",
+            "Nightlife"
+        ],
+        occupation: "Marketing Manager",
+        location: "Downtown, CA",
+        verified: true,
+        isOnline: true
+    },
+    {
+        id: "2",
+        name: "Alex",
+        age: 28,
+        bio: "Software engineer by day, party animal by night 🎉 | No strings attached 💫",
+        distance: 5.2,
+        images: [
+            "https://images.unsplash.com/photo-1597202992582-9ee5c6672095?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMGNhc3VhbHxlbnwxfHx8fDE3NjIwODc0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop"
+        ],
+        interests: [
+            "Coding",
+            "Gaming",
+            "Music",
+            "Bars",
+            "Tech"
+        ],
+        occupation: "Software Engineer",
+        location: "Tech District, CA",
+        verified: false,
+        isOnline: true
+    },
+    {
+        id: "3",
+        name: "Sophie",
+        age: 24,
+        bio: "Artist 🎨 | Free spirit | Living in the moment and loving every second 🌙",
+        distance: 3.8,
+        images: [
+            "https://images.unsplash.com/photo-1675705444858-97005ce93298?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHlvdW5nJTIwd29tYW58ZW58MXx8fHwxNzYyMDc0MjA1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+            "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=600&fit=crop"
+        ],
+        interests: [
+            "Art",
+            "Museums",
+            "Wine",
+            "Dancing",
+            "Creativity"
+        ],
+        occupation: "Graphic Designer",
+        location: "Arts District, CA",
+        verified: true,
+        isOnline: false
+    },
+    {
+        id: "4",
+        name: "James",
+        age: 30,
+        bio: "Outdoor enthusiast 🏔️ | Photographer | Adventure awaits, let's make it happen 📸",
+        distance: 7.1,
+        images: [
+            "https://images.unsplash.com/photo-1680557345345-6f9ef109d252?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMG91dGRvb3J8ZW58MXx8fHwxNzYyMDczNjQ2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+            "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=400&h=600&fit=crop"
+        ],
+        interests: [
+            "Photography",
+            "Hiking",
+            "Camping",
+            "Nature",
+            "Adventure"
+        ],
+        occupation: "Travel Photographer",
+        location: "Westside, CA",
+        verified: true,
+        isOnline: true
+    },
+    {
+        id: "5",
+        name: "Olivia",
+        age: 27,
+        bio: "Fitness enthusiast 💪 | Yoga instructor | Living my best life, join me? 🌟",
+        distance: 4.3,
+        images: [
+            "https://images.unsplash.com/photo-1586550823286-613574af32a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFuJTIwbGlmZXN0eWxlfGVufDF8fHx8MTc2MjE1NzU1MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+            "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=600&fit=crop"
+        ],
+        interests: [
+            "Fitness",
+            "Yoga",
+            "Health",
+            "Running",
+            "Wellness"
+        ],
+        occupation: "Yoga Instructor",
+        location: "Beach City, CA",
+        verified: false,
+        isOnline: true
+    },
+    {
+        id: "6",
+        name: "Ryan",
+        age: 29,
+        bio: "Marketing professional | World traveler ✈️ | Always down for spontaneous adventures 🌮",
+        distance: 6.7,
+        images: [
+            "https://images.unsplash.com/photo-1592234789031-94bf65f630ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMG1hbiUyMHNtaWxlfGVufDF8fHx8MTc2MjE2ODI3MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+            "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=600&fit=crop"
+        ],
+        interests: [
+            "Travel",
+            "Food",
+            "Marketing",
+            "Sports",
+            "Socializing"
+        ],
+        occupation: "Marketing Director",
+        location: "Uptown, CA",
+        verified: true,
+        isOnline: false
+    },
+    {
+        id: "7",
+        name: "Maya",
+        age: 25,
+        bio: "Dance instructor 💃 | Night owl | Let's dance until sunrise 🌅",
+        distance: 1.8,
+        images: [
+            "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=400&h=600&fit=crop"
+        ],
+        interests: [
+            "Dancing",
+            "Music",
+            "Nightlife",
+            "Fitness",
+            "Performance"
+        ],
+        occupation: "Dance Instructor",
+        location: "Entertainment District, CA",
+        verified: true,
+        isOnline: true
+    },
+    {
+        id: "8",
+        name: "Jake",
+        age: 32,
+        bio: "Bartender & mixologist 🍸 | Know all the best spots in town | Let's grab a drink 🥂",
+        distance: 2.1,
+        images: [
+            "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=400&h=600&fit=crop"
+        ],
+        interests: [
+            "Cocktails",
+            "Nightlife",
+            "Music",
+            "Food",
+            "Socializing"
+        ],
+        occupation: "Bartender",
+        location: "Bar District, CA",
+        verified: false,
+        isOnline: true
+    }
+];
+const mockAds = [
+    {
+        id: "ad1",
+        type: "ad",
+        brand: "Luxury Hotels",
+        title: "Weekend Getaway Special",
+        description: "Book your romantic escape today. 50% off luxury suites this weekend only!",
+        image: "https://images.unsplash.com/photo-1761927206868-58fedbcdaf0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBkZXN0aW5hdGlvbiUyMGJlYWNofGVufDF8fHx8MTc2MjA5ODM1OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        callToAction: "Book Now",
+        url: "https://example.com/luxury-hotels",
+        category: "Travel"
+    },
+    {
+        id: "ad2",
+        type: "ad",
+        brand: "Premium Drinks",
+        title: "Craft Your Night",
+        description: "Premium cocktails delivered to your door. Perfect for spontaneous dates!",
+        image: "https://images.unsplash.com/photo-1756115484694-009466dbaa67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXRuZXNzJTIwd29ya291dCUyMGd5bXxlbnwxfHx8fDE3NjIxMDU1MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        callToAction: "Order Now",
+        url: "https://example.com/premium-drinks",
+        category: "Food & Drink"
+    },
+    {
+        id: "ad3",
+        type: "ad",
+        brand: "Fashion Forward",
+        title: "Date Night Ready",
+        description: "Look your best tonight. New arrivals perfect for any casual encounter.",
+        image: "https://images.unsplash.com/photo-1670177257750-9b47927f68eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB3YXRjaCUyMHByb2R1Y3R8ZW58MXx8fHwxNzYyMDcwNTkzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        callToAction: "Shop Now",
+        url: "https://example.com/fashion-forward",
+        category: "Fashion"
+    }
+];
+function getInitialCards() {
+    const stack = [];
+    let adIndex = 0;
+    // Shuffle profiles for variety
+    const shuffledProfiles = [
+        ...mockProfiles
+    ].sort(()=>Math.random() - 0.5);
+    shuffledProfiles.forEach((profile, index)=>{
+        stack.push(profile);
+        // Insert ad every 3-4 profiles
+        if ((index + 1) % 4 === 0 && adIndex < mockAds.length) {
+            stack.push(mockAds[adIndex]);
+            adIndex++;
+        }
+    });
+    return stack;
+}
+function getRefreshCards() {
+    return getInitialCards();
+}
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/components/swipe/SwipeCard.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "SwipeCard",
+    ()=>SwipeCard
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$tag$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Tag$3e$__ = __turbopack_context__.i("[project]/node_modules/antd/es/tag/index.js [app-client] (ecmascript) <export default as Tag>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$typography$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Typography$3e$__ = __turbopack_context__.i("[project]/node_modules/antd/es/typography/index.js [app-client] (ecmascript) <export default as Typography>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$space$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__$3c$export__default__as__Space$3e$__ = __turbopack_context__.i("[project]/node_modules/antd/es/space/index.js [app-client] (ecmascript) <locals> <export default as Space>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$flex$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Flex$3e$__ = __turbopack_context__.i("[project]/node_modules/antd/es/flex/index.js [app-client] (ecmascript) <export default as Flex>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$EnvironmentOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__EnvironmentOutlined$3e$__ = __turbopack_context__.i("[project]/node_modules/@ant-design/icons/es/icons/EnvironmentOutlined.js [app-client] (ecmascript) <export default as EnvironmentOutlined>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$CheckCircleFilled$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircleFilled$3e$__ = __turbopack_context__.i("[project]/node_modules/@ant-design/icons/es/icons/CheckCircleFilled.js [app-client] (ecmascript) <export default as CheckCircleFilled>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$InfoCircleOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__InfoCircleOutlined$3e$__ = __turbopack_context__.i("[project]/node_modules/@ant-design/icons/es/icons/InfoCircleOutlined.js [app-client] (ecmascript) <export default as InfoCircleOutlined>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$swipeData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/swipeData.ts [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+'use client';
+;
+;
+;
+;
+const { Title, Text } = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$typography$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Typography$3e$__["Typography"];
+function SwipeCard({ card, onSwipe, style = {}, triggerSwipe, onSwipeComplete, isTopCard = false }) {
+    _s();
+    const [isDragging, setIsDragging] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [dragOffset, setDragOffset] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
+        x: 0,
+        y: 0
+    });
+    const [rotation, setRotation] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const cardRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const startPos = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])({
+        x: 0,
+        y: 0
+    });
+    // Handle programmatic swipe triggers
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "SwipeCard.useEffect": ()=>{
+            if (triggerSwipe && isTopCard) {
+                const direction = triggerSwipe === 'right' ? 1 : -1;
+                animateSwipeOut(direction);
+            }
+        }
+    }["SwipeCard.useEffect"], [
+        triggerSwipe,
+        isTopCard
+    ]);
+    const animateSwipeOut = (direction)=>{
+        if (!cardRef.current) return;
+        const targetX = direction * 400;
+        const targetRotation = direction * 30;
+        cardRef.current.style.transition = 'transform 0.4s ease-out, opacity 0.4s ease-out';
+        cardRef.current.style.transform = `translateX(${targetX}px) rotate(${targetRotation}deg)`;
+        cardRef.current.style.opacity = '0';
+        setTimeout(()=>{
+            onSwipe(direction > 0 ? 'right' : 'left');
+            onSwipeComplete?.();
+        }, 400);
+    };
+    const handleMouseDown = (e)=>{
+        if (!isTopCard) return;
+        e.preventDefault();
+        setIsDragging(true);
+        startPos.current = {
+            x: e.clientX,
+            y: e.clientY
+        };
+    };
+    const handleTouchStart = (e)=>{
+        if (!isTopCard) return;
+        setIsDragging(true);
+        const touch = e.touches[0];
+        startPos.current = {
+            x: touch.clientX,
+            y: touch.clientY
+        };
+    };
+    const handleMouseMove = (e)=>{
+        if (!isDragging || !isTopCard) return;
+        const deltaX = e.clientX - startPos.current.x;
+        const deltaY = e.clientY - startPos.current.y;
+        setDragOffset({
+            x: deltaX,
+            y: deltaY
+        });
+        setRotation(deltaX * 0.1); // Subtle rotation based on drag
+    };
+    const handleTouchMove = (e)=>{
+        if (!isDragging || !isTopCard) return;
+        const touch = e.touches[0];
+        const deltaX = touch.clientX - startPos.current.x;
+        const deltaY = touch.clientY - startPos.current.y;
+        setDragOffset({
+            x: deltaX,
+            y: deltaY
+        });
+        setRotation(deltaX * 0.1);
+    };
+    const handleDragEnd = ()=>{
+        if (!isDragging || !isTopCard) return;
+        setIsDragging(false);
+        const threshold = 120;
+        if (Math.abs(dragOffset.x) > threshold) {
+            const direction = dragOffset.x > 0 ? 1 : -1;
+            animateSwipeOut(direction);
+        } else {
+            // Snap back to center
+            if (cardRef.current) {
+                cardRef.current.style.transition = 'transform 0.3s ease-out';
+                cardRef.current.style.transform = 'translateX(0) translateY(0) rotate(0deg)';
+            }
+            setDragOffset({
+                x: 0,
+                y: 0
+            });
+            setRotation(0);
+        }
+    };
+    // Add global event listeners for mouse/touch events
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "SwipeCard.useEffect": ()=>{
+            const handleGlobalMouseMove = {
+                "SwipeCard.useEffect.handleGlobalMouseMove": (e)=>{
+                    if (!isDragging || !isTopCard) return;
+                    const deltaX = e.clientX - startPos.current.x;
+                    const deltaY = e.clientY - startPos.current.y;
+                    setDragOffset({
+                        x: deltaX,
+                        y: deltaY
+                    });
+                    setRotation(deltaX * 0.1);
+                }
+            }["SwipeCard.useEffect.handleGlobalMouseMove"];
+            const handleGlobalTouchMove = {
+                "SwipeCard.useEffect.handleGlobalTouchMove": (e)=>{
+                    if (!isDragging || !isTopCard) return;
+                    const touch = e.touches[0];
+                    const deltaX = touch.clientX - startPos.current.x;
+                    const deltaY = touch.clientY - startPos.current.y;
+                    setDragOffset({
+                        x: deltaX,
+                        y: deltaY
+                    });
+                    setRotation(deltaX * 0.1);
+                }
+            }["SwipeCard.useEffect.handleGlobalTouchMove"];
+            if (isDragging) {
+                document.addEventListener('mousemove', handleGlobalMouseMove);
+                document.addEventListener('mouseup', handleDragEnd);
+                document.addEventListener('touchmove', handleGlobalTouchMove);
+                document.addEventListener('touchend', handleDragEnd);
+            }
+            return ({
+                "SwipeCard.useEffect": ()=>{
+                    document.removeEventListener('mousemove', handleGlobalMouseMove);
+                    document.removeEventListener('mouseup', handleDragEnd);
+                    document.removeEventListener('touchmove', handleGlobalTouchMove);
+                    document.removeEventListener('touchend', handleDragEnd);
+                }
+            })["SwipeCard.useEffect"];
+        }
+    }["SwipeCard.useEffect"], [
+        isDragging,
+        isTopCard
+    ]);
+    const cardTransform = isTopCard ? `translateX(${dragOffset.x}px) translateY(${dragOffset.y}px) rotate(${rotation}deg)` : 'translateX(0) translateY(0) rotate(0deg)';
+    const likeOpacity = Math.max(0, Math.min(1, dragOffset.x / 150));
+    const nopeOpacity = Math.max(0, Math.min(1, Math.abs(dragOffset.x) / 150));
+    const profileCardStyle = {
+        backgroundColor: '#ffffff',
+        borderRadius: 16,
+        boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
+        overflow: 'hidden',
+        cursor: isTopCard ? 'grab' : 'default',
+        pointerEvents: isTopCard ? 'auto' : 'none',
+        transform: `${style?.transform} ${cardTransform}`,
+        zIndex: style?.zIndex || (isTopCard ? 50 : 40),
+        width: style?.width || '100%',
+        height: style?.height || '100%',
+        position: style?.position,
+        top: style?.top,
+        left: style?.left
+    };
+    const imageContainerStyle = {
+        position: 'relative',
+        width: '100%',
+        height: '100%'
+    };
+    const imageStyle = {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover'
+    };
+    const gradientOverlayStyle = {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: 'linear-gradient(to bottom, transparent 0%, transparent 60%, rgba(0,0,0,0.5) 100%)'
+    };
+    const likeIndicatorStyle = {
+        position: 'absolute',
+        top: 80,
+        left: 32,
+        border: '4px solid #52c41a',
+        color: '#52c41a',
+        backgroundColor: 'rgba(255,255,255,0.95)',
+        padding: '8px 16px',
+        borderRadius: 8,
+        transform: 'rotate(-15deg)',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+        fontWeight: 900,
+        fontSize: 24,
+        opacity: likeOpacity
+    };
+    const nopeIndicatorStyle = {
+        position: 'absolute',
+        top: 80,
+        right: 32,
+        border: '4px solid #ff4d4f',
+        color: '#ff4d4f',
+        backgroundColor: 'rgba(255,255,255,0.95)',
+        padding: '8px 16px',
+        borderRadius: 8,
+        transform: 'rotate(15deg)',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+        fontWeight: 900,
+        fontSize: 24,
+        opacity: nopeOpacity
+    };
+    const verificationBadgeStyle = {
+        position: 'absolute',
+        top: 16,
+        right: 16
+    };
+    const profileInfoStyle = {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        padding: 24,
+        color: '#ffffff'
+    };
+    const infoButtonStyle = {
+        width: 40,
+        height: 40,
+        backgroundColor: 'rgba(255,255,255,0.2)',
+        borderRadius: '50%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backdropFilter: 'blur(4px)',
+        marginLeft: 16
+    };
+    if ((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$swipeData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["isProfile"])(card)) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            ref: cardRef,
+            style: profileCardStyle,
+            onMouseDown: handleMouseDown,
+            onTouchStart: handleTouchStart,
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                style: imageContainerStyle,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                        src: card.images[0],
+                        alt: card.name,
+                        style: imageStyle,
+                        draggable: false
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                        lineNumber: 264,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: gradientOverlayStyle
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                        lineNumber: 271,
+                        columnNumber: 11
+                    }, this),
+                    isTopCard && dragOffset.x > 50 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: likeIndicatorStyle,
+                        children: "LIKE"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                        lineNumber: 275,
+                        columnNumber: 13
+                    }, this),
+                    isTopCard && dragOffset.x < -50 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: nopeIndicatorStyle,
+                        children: "NOPE"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                        lineNumber: 281,
+                        columnNumber: 13
+                    }, this),
+                    card.verified && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: verificationBadgeStyle,
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$CheckCircleFilled$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircleFilled$3e$__["CheckCircleFilled"], {
+                            style: {
+                                color: '#1890ff',
+                                fontSize: 32,
+                                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
+                            }
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                            lineNumber: 289,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                        lineNumber: 288,
+                        columnNumber: 13
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: profileInfoStyle,
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$flex$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Flex$3e$__["Flex"], {
+                            justify: "space-between",
+                            align: "end",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    style: {
+                                        flex: 1
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$space$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__$3c$export__default__as__Space$3e$__["Space"], {
+                                            align: "baseline",
+                                            size: "small",
+                                            style: {
+                                                marginBottom: 4
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Title, {
+                                                    level: 1,
+                                                    style: {
+                                                        color: '#ffffff',
+                                                        fontSize: 48,
+                                                        fontWeight: 700,
+                                                        margin: 0,
+                                                        lineHeight: 1
+                                                    },
+                                                    children: card.name
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                                                    lineNumber: 298,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Title, {
+                                                    level: 1,
+                                                    style: {
+                                                        color: '#ffffff',
+                                                        fontSize: 48,
+                                                        fontWeight: 300,
+                                                        margin: 0,
+                                                        lineHeight: 1
+                                                    },
+                                                    children: card.age
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                                                    lineNumber: 307,
+                                                    columnNumber: 19
+                                                }, this),
+                                                card.verified && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$CheckCircleFilled$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircleFilled$3e$__["CheckCircleFilled"], {
+                                                    style: {
+                                                        color: '#1890ff',
+                                                        fontSize: 20
+                                                    }
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                                                    lineNumber: 317,
+                                                    columnNumber: 21
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                                            lineNumber: 297,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$space$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__$3c$export__default__as__Space$3e$__["Space"], {
+                                            align: "center",
+                                            size: "small",
+                                            style: {
+                                                marginBottom: 8
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$EnvironmentOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__EnvironmentOutlined$3e$__["EnvironmentOutlined"], {
+                                                    style: {
+                                                        fontSize: 14,
+                                                        color: 'rgba(255,255,255,0.9)'
+                                                    }
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                                                    lineNumber: 322,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Text, {
+                                                    style: {
+                                                        color: 'rgba(255,255,255,0.9)',
+                                                        fontSize: 14,
+                                                        fontWeight: 500
+                                                    },
+                                                    children: [
+                                                        card.distance,
+                                                        " kilometers away"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                                                    lineNumber: 323,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                                            lineNumber: 321,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                                    lineNumber: 296,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    style: infoButtonStyle,
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$InfoCircleOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__InfoCircleOutlined$3e$__["InfoCircleOutlined"], {
+                                        style: {
+                                            color: '#ffffff',
+                                            fontSize: 20
+                                        }
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                                        lineNumber: 334,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                                    lineNumber: 333,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                            lineNumber: 295,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                        lineNumber: 294,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                lineNumber: 263,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+            lineNumber: 257,
+            columnNumber: 7
+        }, this);
+    }
+    // Ad Card Rendering
+    const adCardStyle = {
+        backgroundColor: '#ffffff',
+        borderRadius: 16,
+        boxShadow: '0 16px 32px rgba(0,0,0,0.15)',
+        overflow: 'hidden',
+        cursor: isTopCard ? 'grab' : 'default',
+        pointerEvents: isTopCard ? 'auto' : 'none',
+        transform: `${style?.transform} ${cardTransform}`,
+        zIndex: style?.zIndex || (isTopCard ? 50 : 40),
+        width: style?.width || '100%',
+        height: style?.height || '100%',
+        position: style?.position,
+        top: style?.top,
+        left: style?.left
+    };
+    const adGradientOverlayStyle = {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, rgba(0,0,0,0.8) 100%)'
+    };
+    const sponsoredLabelStyle = {
+        position: 'absolute',
+        top: 16,
+        left: 16,
+        backgroundColor: '#faad14',
+        color: '#000000',
+        padding: '4px 8px',
+        borderRadius: 4,
+        fontSize: 12,
+        fontWeight: 700
+    };
+    const adContentStyle = {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        padding: 24,
+        color: '#ffffff'
+    };
+    const ctaButtonStyle = {
+        backgroundColor: '#ffffff',
+        color: '#000000',
+        padding: '12px 24px',
+        borderRadius: 24,
+        textAlign: 'center',
+        fontWeight: 700,
+        border: 'none',
+        cursor: 'pointer',
+        width: '100%'
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        ref: cardRef,
+        style: adCardStyle,
+        onMouseDown: handleMouseDown,
+        onTouchStart: handleTouchStart,
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            style: imageContainerStyle,
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                    src: card.image,
+                    alt: card.title,
+                    style: imageStyle,
+                    draggable: false
+                }, void 0, false, {
+                    fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                    lineNumber: 410,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    style: adGradientOverlayStyle
+                }, void 0, false, {
+                    fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                    lineNumber: 417,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$tag$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Tag$3e$__["Tag"], {
+                    style: sponsoredLabelStyle,
+                    children: "SPONSORED"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                    lineNumber: 420,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    style: adContentStyle,
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Title, {
+                            level: 2,
+                            style: {
+                                color: '#ffffff',
+                                fontSize: 32,
+                                fontWeight: 700,
+                                margin: '0 0 8px 0'
+                            },
+                            children: card.title
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                            lineNumber: 426,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Text, {
+                            style: {
+                                color: 'rgba(255,255,255,0.9)',
+                                fontSize: 16,
+                                display: 'block',
+                                marginBottom: 16
+                            },
+                            children: card.description
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                            lineNumber: 434,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            style: ctaButtonStyle,
+                            children: card.callToAction
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                            lineNumber: 443,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+                    lineNumber: 425,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+            lineNumber: 409,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/swipe/SwipeCard.tsx",
+        lineNumber: 403,
+        columnNumber: 5
+    }, this);
+}
+_s(SwipeCard, "j6DitLFXgWC1YDosRepaaOPPa0k=");
+_c = SwipeCard;
+var _c;
+__turbopack_context__.k.register(_c, "SwipeCard");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/components/swipe/SwipeCardStack.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "SwipeCardStack",
+    ()=>SwipeCardStack
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$swipe$2f$SwipeCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/swipe/SwipeCard.tsx [app-client] (ecmascript)");
+'use client';
+;
+;
+function SwipeCardStack({ cards, onSwipe, triggerSwipe, onSwipeComplete }) {
+    if (cards.length === 0) return null;
+    const containerStyle = {
+        position: 'relative',
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        style: containerStyle,
+        children: cards.slice(-3).reverse().map((card, index)=>{
+            const isTopCard = index === 0;
+            // Layered card styling
+            const cardStyle = {
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: `translate(-50%, -50%) scale(${1 - index * 0.05}) rotate(${index * 1.5}deg)`,
+                zIndex: 50 - index,
+                opacity: isTopCard ? 1 : 0.85,
+                width: '90%',
+                maxWidth: '400px',
+                height: '80%',
+                maxHeight: '600px',
+                borderRadius: '16px',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)',
+                backgroundColor: '#000',
+                overflow: 'hidden',
+                transition: 'transform 0.3s ease, opacity 0.3s ease'
+            };
+            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$swipe$2f$SwipeCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SwipeCard"], {
+                card: card,
+                onSwipe: onSwipe,
+                style: cardStyle,
+                triggerSwipe: isTopCard ? triggerSwipe : null,
+                onSwipeComplete: onSwipeComplete,
+                isTopCard: isTopCard
+            }, `${card.id}-${cards.length}`, false, {
+                fileName: "[project]/src/components/swipe/SwipeCardStack.tsx",
+                lineNumber: 55,
+                columnNumber: 25
+            }, this);
+        })
+    }, void 0, false, {
+        fileName: "[project]/src/components/swipe/SwipeCardStack.tsx",
+        lineNumber: 27,
+        columnNumber: 9
+    }, this);
+} // 'use client';
+ // import React from 'react';
+ // import { SwipeCard } from './SwipeCard';
+ // import { SwipeCardItem } from '../../data/swipeData';
+ // interface SwipeCardStackProps {
+ //     cards: SwipeCardItem[];
+ //     onSwipe: (direction: "left" | "right") => void;
+ //     triggerSwipe?: "left" | "right" | null;
+ //     onSwipeComplete?: () => void;
+ // }
+ // export function SwipeCardStack({ cards, onSwipe, triggerSwipe, onSwipeComplete }: SwipeCardStackProps) {
+ //     if (cards.length === 0) return null;
+ //     const containerStyle: React.CSSProperties = { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' };
+ //     return (
+ //         <div style={containerStyle}>
+ //             {/* Show up to 3 cards in the stack for performance */}
+ //             {cards.slice(-3).reverse().map((card, index) => {
+ //                 const isTopCard = index === 0;
+ //                 // Card stacking effect - each card positioned absolutely on top of each other
+ //                 const cardStyle: React.CSSProperties = {
+ //                     position: 'absolute',
+ //                     top: '20%',
+ //                     left: '50%',
+ //                     transform: `translate(-50%, -50%) scale(${1 - index * 0.05}) rotate(${index * 2}deg)`,
+ //                     zIndex: 50 - index,
+ //                     opacity: index === 0 ? 1 : 0.8,
+ //                     width: '100%',
+ //                     height: '90%',
+ //                     borderRadius: '16px',
+ //                     boxShadow: '0 8px 32px rgba(0,0,0,0.3)'
+ //                 };
+ //                 return (
+ //                     <SwipeCard
+ //                         key={`${card.id}-${cards.length}`} // Include length to force re-render
+ //                         card={card}
+ //                         onSwipe={onSwipe}
+ //                         style={cardStyle}
+ //                         triggerSwipe={isTopCard ? triggerSwipe : null}
+ //                         onSwipeComplete={onSwipeComplete}
+ //                         isTopCard={isTopCard}
+ //                     />
+ //                 );
+ //             })}
+ //         </div>
+ //     );
+ // }
+_c = SwipeCardStack;
+var _c;
+__turbopack_context__.k.register(_c, "SwipeCardStack");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/app/(authenticated)/layout.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>DashboardLayout
+]);
+function DashboardLayout({ children }) {
+    return children;
+} // 'use client';
+ // import React from 'react';
+ // import { Layout } from 'antd';
+ // import { useMediaQuery } from 'react-responsive';
+ // import { COMMON_STYLES, THEME_COLORS } from '@/providers/theme';
+ // import DesktopSidebar from '@/components/DesktopSidebar';
+ // import MobileBottomNav from '@/components/MobileBottomNav';
+ // import { usePathname, useRouter } from 'next/navigation';
+ // const { Sider, Content } = Layout;
+ // interface AuthenticatedLayoutProps {
+ //   children: React.ReactNode;
+ // }
+ // const AuthenticatedLayout: React.FC<AuthenticatedLayoutProps> = ({ children }) => {
+ //   // Detect screen size for responsive layout
+ //   const isMobile = useMediaQuery({ maxWidth: 768 });
+ //   const router = useRouter();
+ //   const pathname = usePathname();
+ //   const handleNav = (path: string) => router.push(path);
+ //   return (
+ //     <Layout
+ //       style={{
+ //         // ...COMMON_STYLES.fullHeight,
+ //         // minHeight: '100vh',
+ //         // backgroundColor: '#000',
+ //         // display: 'flex',
+ //         // flexDirection: isMobile ? 'column' : 'row',
+ //       }}
+ //     >
+ //       {/* Sidebar for desktop */}
+ //       {!isMobile && (<DesktopSidebar />)}
+ //       {/* Main content area */}
+ //       <Layout
+ //         style={{
+ //           flex: 1,
+ //           display: 'flex',
+ //           flexDirection: 'column',
+ //           justifyContent: 'center',
+ //           alignItems: 'center',
+ //           // background: '#000',
+ //           overflow: 'hidden',
+ //           position: 'relative',
+ //         }}
+ //       >
+ //         <Content
+ //           style={{
+ //             width: '100%',
+ //             // height: isMobile ? 'calc(100vh - 60px)' : '100vh',
+ //             maxWidth: isMobile ? '100%' : '80%',
+ //             display: 'flex',
+ //             justifyContent: 'center',
+ //             alignItems: 'center',
+ //           }}
+ //         >
+ //           {children}
+ //         </Content>
+ //       </Layout>
+ //     </Layout>
+ //   );
+ // };
+ // export default AuthenticatedLayout;
+ // 'use client';
+ // import React from 'react';
+ // import { Layout } from 'antd';
+ // import { useMediaQuery } from 'react-responsive';
+ // import { THEME_COLORS } from '@/providers/theme';
+ // import DesktopSidebar from '@/components/DesktopSidebar';
+ // import MobileBottomNav from '@/components/MobileBottomNav';
+ // import { usePathname, useRouter } from 'next/navigation';
+ // const { Sider, Content } = Layout;
+ // interface AuthenticatedLayoutProps {
+ //   children: React.ReactNode;
+ // }
+ // const AuthenticatedLayout: React.FC<AuthenticatedLayoutProps> = ({ children }) => {
+ //   // Detect screen size for responsive layout
+ //   const isMobile = useMediaQuery({ maxWidth: 768 });
+ //   const router = useRouter();
+ //   const pathname = usePathname();
+ //   const handleNav = (path: string) => router.push(path);
+ //   return (
+ //     <Layout
+ //       style={{
+ //         minHeight: '100vh',
+ //         backgroundColor: '#000', // fallback to black
+ //         display: 'flex',
+ //         flexDirection: isMobile ? 'column' : 'row',
+ //       }}
+ //     >
+ //       Sidebar for desktop
+ //       {!isMobile && (
+ //         <Sider
+ //           width={260}
+ //           theme="light"
+ //           style={{
+ //             background: '#fff',
+ //             borderRight: '1px solid #f0f0f0',
+ //             display: 'flex',
+ //             flexDirection: 'column',
+ //             padding: '1rem',
+ //           }}
+ //         >
+ //           <DesktopSidebar />
+ //         </Sider>
+ //       )}
+ //       {/* Main content area */}
+ //       <Layout
+ //         style={{
+ //           flex: 1,
+ //           display: 'flex',
+ //           flexDirection: 'column',
+ //           justifyContent: 'center',
+ //           alignItems: 'center',
+ //           // background: '#000',
+ //           // overflow: 'hidden',
+ //           position: 'relative',
+ //         }}
+ //       >
+ //         <Content
+ //           style={{
+ //             width: '100%',
+ //             maxWidth: '1000px',
+ //             display: 'flex',
+ //             justifyContent: 'center',
+ //             alignItems: 'center',
+ //             height: isMobile ? 'calc(100vh - 60px)' : '100vh',
+ //           }}
+ //         >
+ //           {children}
+ //         </Content>
+ //         {/* Bottom navigation for mobile */}
+ //         {isMobile && (
+ //           <div
+ //             style={{
+ //               position: 'fixed',
+ //               bottom: 0,
+ //               left: 0,
+ //               width: '100%',
+ //               background: '#fff',
+ //               borderTop: '1px solid #eaeaea',
+ //               zIndex: 100,
+ //             }}
+ //           >
+ //             <MobileBottomNav pathname={pathname} onNavigate={handleNav} />
+ //           </div>
+ //         )}
+ //       </Layout>
+ //     </Layout>
+ //   );
+ // };
+ // export default AuthenticatedLayout;
+ // // src/app/(authenticated)/layout.tsx
+ // 'use client';
+ // import React, { useState, useEffect } from "react";
+ // import { Layout, Avatar, Badge, Space, Typography } from 'antd';
+ // import { useRouter, usePathname } from 'next/navigation';
+ // import {
+ //   UserOutlined,
+ //   HeartOutlined,
+ //   MessageOutlined,
+ //   SettingOutlined,
+ //   FireOutlined,
+ //   TeamOutlined,
+ // } from '@ant-design/icons';
+ // import { DATING_THEME } from '../../providers/theme';
+ // const { Content } = Layout;
+ // const { Text } = Typography;
+ // // Mock user data
+ // const currentUser = {
+ //   id: '1',
+ //   name: 'John Doe',
+ //   avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
+ //   unreadMessages: 3
+ // };
+ // // Navigation items for Tinder-style layout
+ // const navigationItems = [
+ //   {
+ //     key: '/home',
+ //     icon: FireOutlined,
+ //     label: 'Discover',
+ //     activeColor: DATING_THEME.colors.primary,
+ //   },
+ //   {
+ //     key: '/app',
+ //     icon: TeamOutlined,
+ //     label: 'Matches',
+ //     activeColor: DATING_THEME.colors.primary,
+ //     badge: 12, // New matches count
+ //   },
+ //   {
+ //     key: '/chat',
+ //     icon: MessageOutlined,
+ //     label: 'Messages',
+ //     activeColor: DATING_THEME.colors.primary,
+ //     badge: currentUser.unreadMessages,
+ //   },
+ //   {
+ //     key: '/profile/edit',
+ //     icon: UserOutlined,
+ //     label: 'Profile',
+ //     activeColor: DATING_THEME.colors.primary,
+ //   },
+ // ];
+ // // Tinder-style Authenticated Layout
+ // export default function AuthenticatedLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
+ //   const router = useRouter();
+ //   const pathname = usePathname();
+ //   const [isMobile, setIsMobile] = useState(false);
+ //   // Check if mobile on mount and resize
+ //   useEffect(() => {
+ //     const checkMobile = () => {
+ //       setIsMobile(window.innerWidth < 768);
+ //     };
+ //     checkMobile();
+ //     window.addEventListener('resize', checkMobile);
+ //     return () => window.removeEventListener('resize', checkMobile);
+ //   }, []);
+ //   // Handle navigation using Next.js router for client-side routing
+ //   const handleNavigation = (key: string) => {
+ //     router.push(key);
+ //   };
+ //   // Desktop Left Panel - Matches List (like Tinder desktop)
+ //   const DesktopLeftPanel = () => {
+ //     // Mock matches data for the left panel
+ //     const matches = [
+ //       { id: '1', name: 'Brender', avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop', hasGoldBadge: true },
+ //       { id: '2', name: 'Tiffany', avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop' },
+ //       { id: '3', name: 'Matheu', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop' },
+ //       { id: '4', name: 'Lindra', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop' },
+ //       { id: '5', name: 'Sharon', avatar: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop' },
+ //       { id: '6', name: 'Mel', avatar: 'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=100&h=100&fit=crop' },
+ //       { id: '7', name: 'Becky', avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&h=100&fit=crop' },
+ //       { id: '8', name: 'Rish', avatar: 'https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=100&h=100&fit=crop' },
+ //     ];
+ //     return (
+ //       <div style={{
+ //         width: 280,
+ //         height: '100vh',
+ //         background: DATING_THEME.colors.cardBackground,
+ //         borderRight: `1px solid ${DATING_THEME.colors.borderLight}`,
+ //         display: 'flex',
+ //         flexDirection: 'column',
+ //         position: 'fixed',
+ //         left: 0,
+ //         top: 0,
+ //         zIndex: 1000,
+ //       }}>
+ //         {/* Header with Tinder-style gradient */}
+ //         <div style={{
+ //           height: 100,
+ //           background: DATING_THEME.gradients.primary,
+ //           display: 'flex',
+ //           alignItems: 'center',
+ //           justifyContent: 'center',
+ //           position: 'relative',
+ //         }}>
+ //           {/* User profile icon */}
+ //           <div style={{
+ //             position: 'absolute',
+ //             left: 20,
+ //             top: 20,
+ //           }}>
+ //             <Avatar
+ //               src={currentUser.avatar}
+ //               size={32}
+ //               style={{
+ //                 border: '2px solid white',
+ //                 cursor: 'pointer',
+ //               }}
+ //             />
+ //           </div>
+ //           {/* Navigation icons like Tinder */}
+ //           <Space size={16}>
+ //             <div style={{
+ //               width: 40,
+ //               height: 40,
+ //               borderRadius: '50%',
+ //               backgroundColor: 'rgba(255,255,255,0.2)',
+ //               display: 'flex',
+ //               alignItems: 'center',
+ //               justifyContent: 'center',
+ //               cursor: 'pointer',
+ //             }}>
+ //               <FireOutlined style={{ color: 'white', fontSize: 20 }} />
+ //             </div>
+ //             <div style={{
+ //               width: 40,
+ //               height: 40,
+ //               borderRadius: '50%',
+ //               backgroundColor: 'rgba(255,255,255,0.2)',
+ //               display: 'flex',
+ //               alignItems: 'center',
+ //               justifyContent: 'center',
+ //               cursor: 'pointer',
+ //             }}>
+ //               <TeamOutlined style={{ color: 'white', fontSize: 20 }} />
+ //             </div>
+ //             <div style={{
+ //               width: 40,
+ //               height: 40,
+ //               borderRadius: '50%',
+ //               backgroundColor: 'rgba(255,255,255,0.2)',
+ //               display: 'flex',
+ //               alignItems: 'center',
+ //               justifyContent: 'center',
+ //               cursor: 'pointer',
+ //             }}>
+ //               <MessageOutlined style={{ color: 'white', fontSize: 20 }} />
+ //             </div>
+ //           </Space>
+ //           {/* Settings icon */}
+ //           <div style={{
+ //             position: 'absolute',
+ //             right: 20,
+ //             top: 20,
+ //           }}>
+ //             <SettingOutlined
+ //               style={{
+ //                 color: 'white',
+ //                 fontSize: 20,
+ //                 cursor: 'pointer',
+ //               }}
+ //             />
+ //           </div>
+ //         </div>
+ //         {/* Tabs */}
+ //         <div style={{
+ //           display: 'flex',
+ //           borderBottom: `1px solid ${DATING_THEME.colors.borderLight}`,
+ //         }}>
+ //           <div style={{
+ //             flex: 1,
+ //             padding: '12px 0',
+ //             textAlign: 'center',
+ //             borderBottom: `3px solid ${DATING_THEME.colors.primary}`,
+ //             cursor: 'pointer',
+ //           }}>
+ //             <Text style={{ color: DATING_THEME.colors.primary, fontWeight: 600 }}>
+ //               Matches
+ //             </Text>
+ //           </div>
+ //           <div style={{
+ //             flex: 1,
+ //             padding: '12px 0',
+ //             textAlign: 'center',
+ //             borderBottom: '3px solid transparent',
+ //             cursor: 'pointer',
+ //           }}>
+ //             <Text style={{ color: DATING_THEME.colors.textSecondary }}>
+ //               Messages
+ //             </Text>
+ //           </div>
+ //         </div>
+ //         {/* Matches List */}
+ //         <div style={{
+ //           flex: 1,
+ //           overflowY: 'auto',
+ //           padding: '8px',
+ //         }}>
+ //           <div style={{
+ //             display: 'grid',
+ //             gridTemplateColumns: 'repeat(3, 1fr)',
+ //             gap: '8px',
+ //           }}>
+ //             {matches.map((match, index) => (
+ //               <div
+ //                 key={match.id}
+ //                 style={{
+ //                   position: 'relative',
+ //                   cursor: 'pointer',
+ //                   borderRadius: 8,
+ //                   overflow: 'hidden',
+ //                 }}
+ //               >
+ //                 <div
+ //                   style={{
+ //                     width: '100%',
+ //                     height: 80,
+ //                     backgroundImage: `url(${match.avatar})`,
+ //                     backgroundSize: 'cover',
+ //                     backgroundPosition: 'center',
+ //                     borderRadius: 8,
+ //                     position: 'relative',
+ //                   }}
+ //                 >
+ //                   {/* Gold badge for first item like in Tinder */}
+ //                   {index === 0 && (
+ //                     <div style={{
+ //                       position: 'absolute',
+ //                       top: 4,
+ //                       left: 4,
+ //                       backgroundColor: '#FFD700',
+ //                       color: 'black',
+ //                       fontSize: 10,
+ //                       fontWeight: 'bold',
+ //                       padding: '2px 6px',
+ //                       borderRadius: 8,
+ //                     }}>
+ //                       99+
+ //                     </div>
+ //                   )}
+ //                   {/* Name overlay */}
+ //                   <div style={{
+ //                     position: 'absolute',
+ //                     bottom: 0,
+ //                     left: 0,
+ //                     right: 0,
+ //                     background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
+ //                     color: 'white',
+ //                     padding: '8px 4px 4px',
+ //                     fontSize: 11,
+ //                     fontWeight: 500,
+ //                   }}>
+ //                     {match.name}
+ //                   </div>
+ //                 </div>
+ //               </div>
+ //             ))}
+ //           </div>
+ //         </div>
+ //       </div>
+ //     );
+ //   };
+ //   // Mobile Bottom Navigation (like first Tinder image)
+ //   const MobileBottomNav = () => (
+ //     <div style={{
+ //       position: 'fixed',
+ //       bottom: 0,
+ //       left: 0,
+ //       right: 0,
+ //       height: 80,
+ //       background: DATING_THEME.colors.cardBackground,
+ //       borderTop: `1px solid ${DATING_THEME.colors.borderLight}`,
+ //       display: 'flex',
+ //       alignItems: 'center',
+ //       justifyContent: 'space-around',
+ //       zIndex: 1000,
+ //       paddingBottom: 'env(safe-area-inset-bottom, 0px)', // Handle iPhone notch
+ //     }}>
+ //       {navigationItems.map((item) => {
+ //         const Icon = item.icon;
+ //         const isActive = pathname === item.key; return (
+ //           <div
+ //             key={item.key}
+ //             onClick={() => handleNavigation(item.key)}
+ //             style={{
+ //               display: 'flex',
+ //               flexDirection: 'column',
+ //               alignItems: 'center',
+ //               cursor: 'pointer',
+ //               padding: '8px 12px',
+ //               borderRadius: 12,
+ //               minWidth: 60,
+ //               transition: 'all 0.2s ease',
+ //             }}
+ //           >
+ //             <div style={{ position: 'relative', marginBottom: 4 }}>
+ //               <Icon
+ //                 style={{
+ //                   fontSize: 24,
+ //                   color: isActive
+ //                     ? DATING_THEME.colors.primary
+ //                     : DATING_THEME.colors.textSecondary
+ //                 }}
+ //               />
+ //               {item.badge && (
+ //                 <Badge
+ //                   count={item.badge > 99 ? '99+' : item.badge}
+ //                   size="small"
+ //                   style={{
+ //                     position: 'absolute',
+ //                     top: -6,
+ //                     right: -6,
+ //                     backgroundColor: DATING_THEME.colors.primary,
+ //                     fontSize: 10,
+ //                   }}
+ //                 />
+ //               )}
+ //             </div>
+ //             <Text
+ //               style={{
+ //                 color: isActive
+ //                   ? DATING_THEME.colors.primary
+ //                   : DATING_THEME.colors.textSecondary,
+ //                 fontSize: 11,
+ //                 fontWeight: isActive ? 600 : 400,
+ //                 textAlign: 'center',
+ //               }}
+ //             >
+ //               {item.label}
+ //             </Text>
+ //           </div>
+ //         );
+ //       })}
+ //     </div>
+ //   );
+ //   return (
+ //     <Layout style={{
+ //       minHeight: '100vh',
+ //       backgroundColor: DATING_THEME.colors.background,
+ //     }}>
+ //       {/* Desktop Left Panel */}
+ //       {!isMobile && <DesktopLeftPanel />}
+ //       {/* Main Content */}
+ //       <Content style={{
+ //         marginLeft: isMobile ? 0 : 280,
+ //         marginBottom: isMobile ? 80 : 0,
+ //         minHeight: '100vh',
+ //         backgroundColor: DATING_THEME.colors.background,
+ //       }}>
+ //         {children}
+ //       </Content>
+ //       {/* Mobile Bottom Navigation */}
+ //       {isMobile && <MobileBottomNav />}
+ //     </Layout>
+ //   );
+ // }
+_c = DashboardLayout;
+var _c;
+__turbopack_context__.k.register(_c, "DashboardLayout");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/app/(authenticated)/home/page.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>HomePage
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$message$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__message$3e$__ = __turbopack_context__.i("[project]/node_modules/antd/es/message/index.js [app-client] (ecmascript) <export default as message>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$grid$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__$3c$export__default__as__Grid$3e$__ = __turbopack_context__.i("[project]/node_modules/antd/es/grid/index.js [app-client] (ecmascript) <locals> <export default as Grid>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$swipe$2f$SwipeCardStack$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/swipe/SwipeCardStack.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$swipeData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/swipeData.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f28$authenticated$292f$layout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/(authenticated)/layout.tsx [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+'use client';
+;
+;
+;
+;
+;
+const { useBreakpoint } = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$grid$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__$3c$export__default__as__Grid$3e$__["Grid"];
+function HomePage() {
+    _s();
+    const screens = useBreakpoint();
+    const [cards, setCards] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$swipeData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getInitialCards"])());
+    const [swipeHistory, setSwipeHistory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [matchedProfile, setMatchedProfile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [triggerSwipe, setTriggerSwipe] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const currentCard = cards[cards.length - 1];
+    /** Handle Swipe */ const handleSwipe = (direction)=>{
+        if (!currentCard) return;
+        setSwipeHistory((prev)=>[
+                ...prev,
+                currentCard
+            ]);
+        if ((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$swipeData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["isProfile"])(currentCard) && direction === 'right') {
+            if (Math.random() > 0.7) {
+                setMatchedProfile(currentCard);
+                __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$message$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__message$3e$__["message"].success(`🎉 It's a match with ${currentCard.name}!`);
+            } else {
+                __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$message$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__message$3e$__["message"].success(`You liked ${currentCard.name}! 💖`);
+            }
+        }
+        if (!(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$swipeData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["isProfile"])(currentCard)) {
+            if (direction === 'right') {
+                __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$message$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__message$3e$__["message"].info(`Interested in ${currentCard.brand}? Check it out!`);
+            }
+        }
+        setCards((prev)=>prev.slice(0, -1));
+    };
+    /** Undo Last Swipe */ const handleUndo = ()=>{
+        if (swipeHistory.length === 0) return;
+        const lastCard = swipeHistory[swipeHistory.length - 1];
+        setCards((prev)=>[
+                ...prev,
+                lastCard
+            ]);
+        setSwipeHistory((prev)=>prev.slice(0, -1));
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$message$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__message$3e$__["message"].info('Undo successful! 🔄');
+    };
+    /** Refresh Deck */ const handleRefresh = ()=>{
+        setCards((0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$swipeData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getInitialCards"])());
+        setSwipeHistory([]);
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$message$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__message$3e$__["message"].success('New profiles loaded! 🔥');
+    };
+    /** Super Like */ const handleSuperLike = ()=>{
+        if (!currentCard || !(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$swipeData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["isProfile"])(currentCard)) return;
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$message$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__message$3e$__["message"].success(`⭐ Super liked ${currentCard.name}!`);
+        if (Math.random() > 0.4) {
+            setMatchedProfile(currentCard);
+            setTimeout(()=>{
+                __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$message$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__message$3e$__["message"].success(`🎉 It's a Super Match with ${currentCard.name}!`);
+            }, 500);
+        }
+        handleSwipe('right');
+    };
+    const handleBoost = ()=>{
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$message$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__message$3e$__["message"].info('🚀 Boost activated! You’ll be a top profile for 30 minutes.');
+    };
+    /** Auto Refresh */ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "HomePage.useEffect": ()=>{
+            if (cards.length === 0) {
+                const timer = setTimeout({
+                    "HomePage.useEffect.timer": ()=>handleRefresh()
+                }["HomePage.useEffect.timer"], 3000);
+                return ({
+                    "HomePage.useEffect": ()=>clearTimeout(timer)
+                })["HomePage.useEffect"];
+            }
+        }
+    }["HomePage.useEffect"], [
+        cards.length
+    ]);
+    /** Layout Styles */ const containerStyle = {
+        width: '100%',
+        height: '100vh',
+        backgroundColor: '#e02222ff',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        overflow: 'hidden',
+        padding: screens.xs ? '0' : '24px'
+    };
+    const cardAreaStyle = {
+        position: 'relative',
+        width: screens.xs ? '100%' : '50%',
+        height: screens.xs ? '100vh' : '90vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+    };
+    /** ✅ Action Buttons: float above bottom of card area */ const actionsContainerStyle = {
+        position: 'absolute',
+        bottom: screens.xs ? '5%' : '6%',
+        left: 28,
+        right: 28,
+        display: 'flex',
+        justifyContent: 'center',
+        zIndex: 100
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f28$authenticated$292f$layout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$swipe$2f$SwipeCardStack$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SwipeCardStack"], {
+            cards: cards,
+            onSwipe: handleSwipe,
+            triggerSwipe: triggerSwipe,
+            onSwipeComplete: ()=>setTriggerSwipe(null)
+        }, void 0, false, {
+            fileName: "[project]/src/app/(authenticated)/home/page.tsx",
+            lineNumber: 125,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/app/(authenticated)/home/page.tsx",
+        lineNumber: 123,
+        columnNumber: 9
+    }, this);
+}
+_s(HomePage, "wXQZIv+esYvmfxcesHu965GgzQs=", false, function() {
+    return [
+        useBreakpoint
+    ];
+});
+_c = HomePage;
+var _c;
+__turbopack_context__.k.register(_c, "HomePage");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/node_modules/antd/es/message/index.js [app-client] (ecmascript) <export default as message>", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "message",
+    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$message$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$message$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/antd/es/message/index.js [app-client] (ecmascript)");
+}),
+"[project]/node_modules/antd/es/grid/index.js [app-client] (ecmascript) <locals> <export default as Grid>", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "Grid",
+    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$grid$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"]
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$grid$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/antd/es/grid/index.js [app-client] (ecmascript) <locals>");
+}),
+"[project]/node_modules/antd/es/tag/index.js [app-client] (ecmascript) <export default as Tag>", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "Tag",
+    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$tag$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$tag$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/antd/es/tag/index.js [app-client] (ecmascript)");
+}),
+"[project]/node_modules/antd/es/space/index.js [app-client] (ecmascript) <locals> <export default as Space>", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "Space",
+    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$space$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"]
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$space$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/antd/es/space/index.js [app-client] (ecmascript) <locals>");
+}),
+"[project]/node_modules/antd/es/flex/index.js [app-client] (ecmascript) <export default as Flex>", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "Flex",
+    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$flex$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$antd$2f$es$2f$flex$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/antd/es/flex/index.js [app-client] (ecmascript)");
+}),
+"[project]/node_modules/@ant-design/icons-svg/es/asn/EnvironmentOutlined.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// This icon file is generated automatically.
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var EnvironmentOutlined = {
+    "icon": {
+        "tag": "svg",
+        "attrs": {
+            "viewBox": "64 64 896 896",
+            "focusable": "false"
+        },
+        "children": [
+            {
+                "tag": "path",
+                "attrs": {
+                    "d": "M854.6 289.1a362.49 362.49 0 00-79.9-115.7 370.83 370.83 0 00-118.2-77.8C610.7 76.6 562.1 67 512 67c-50.1 0-98.7 9.6-144.5 28.5-44.3 18.3-84 44.5-118.2 77.8A363.6 363.6 0 00169.4 289c-19.5 45-29.4 92.8-29.4 142 0 70.6 16.9 140.9 50.1 208.7 26.7 54.5 64 107.6 111 158.1 80.3 86.2 164.5 138.9 188.4 153a43.9 43.9 0 0022.4 6.1c7.8 0 15.5-2 22.4-6.1 23.9-14.1 108.1-66.8 188.4-153 47-50.4 84.3-103.6 111-158.1C867.1 572 884 501.8 884 431.1c0-49.2-9.9-97-29.4-142zM512 880.2c-65.9-41.9-300-207.8-300-449.1 0-77.9 31.1-151.1 87.6-206.3C356.3 169.5 431.7 139 512 139s155.7 30.5 212.4 85.9C780.9 280 812 353.2 812 431.1c0 241.3-234.1 407.2-300 449.1zm0-617.2c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm79.2 255.2A111.6 111.6 0 01512 551c-29.9 0-58-11.7-79.2-32.8A111.6 111.6 0 01400 439c0-29.9 11.7-58 32.8-79.2C454 338.6 482.1 327 512 327c29.9 0 58 11.6 79.2 32.8C612.4 381 624 409.1 624 439c0 29.9-11.6 58-32.8 79.2z"
+                }
+            }
+        ]
+    },
+    "name": "environment",
+    "theme": "outlined"
+};
+const __TURBOPACK__default__export__ = EnvironmentOutlined;
+}),
+"[project]/node_modules/@ant-design/icons/es/icons/EnvironmentOutlined.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$babel$2f$runtime$2f$helpers$2f$esm$2f$extends$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@babel/runtime/helpers/esm/extends.js [app-client] (ecmascript)");
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2d$svg$2f$es$2f$asn$2f$EnvironmentOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@ant-design/icons-svg/es/asn/EnvironmentOutlined.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$components$2f$AntdIcon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@ant-design/icons/es/components/AntdIcon.js [app-client] (ecmascript)");
+;
+;
+;
+;
+var EnvironmentOutlined = function EnvironmentOutlined(props, ref) {
+    return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createElement"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$components$2f$AntdIcon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$babel$2f$runtime$2f$helpers$2f$esm$2f$extends$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])({}, props, {
+        ref: ref,
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2d$svg$2f$es$2f$asn$2f$EnvironmentOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
+    }));
+};
+/**![environment](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTg1NC42IDI4OS4xYTM2Mi40OSAzNjIuNDkgMCAwMC03OS45LTExNS43IDM3MC44MyAzNzAuODMgMCAwMC0xMTguMi03Ny44QzYxMC43IDc2LjYgNTYyLjEgNjcgNTEyIDY3Yy01MC4xIDAtOTguNyA5LjYtMTQ0LjUgMjguNS00NC4zIDE4LjMtODQgNDQuNS0xMTguMiA3Ny44QTM2My42IDM2My42IDAgMDAxNjkuNCAyODljLTE5LjUgNDUtMjkuNCA5Mi44LTI5LjQgMTQyIDAgNzAuNiAxNi45IDE0MC45IDUwLjEgMjA4LjcgMjYuNyA1NC41IDY0IDEwNy42IDExMSAxNTguMSA4MC4zIDg2LjIgMTY0LjUgMTM4LjkgMTg4LjQgMTUzYTQzLjkgNDMuOSAwIDAwMjIuNCA2LjFjNy44IDAgMTUuNS0yIDIyLjQtNi4xIDIzLjktMTQuMSAxMDguMS02Ni44IDE4OC40LTE1MyA0Ny01MC40IDg0LjMtMTAzLjYgMTExLTE1OC4xQzg2Ny4xIDU3MiA4ODQgNTAxLjggODg0IDQzMS4xYzAtNDkuMi05LjktOTctMjkuNC0xNDJ6TTUxMiA4ODAuMmMtNjUuOS00MS45LTMwMC0yMDcuOC0zMDAtNDQ5LjEgMC03Ny45IDMxLjEtMTUxLjEgODcuNi0yMDYuM0MzNTYuMyAxNjkuNSA0MzEuNyAxMzkgNTEyIDEzOXMxNTUuNyAzMC41IDIxMi40IDg1LjlDNzgwLjkgMjgwIDgxMiAzNTMuMiA4MTIgNDMxLjFjMCAyNDEuMy0yMzQuMSA0MDcuMi0zMDAgNDQ5LjF6bTAtNjE3LjJjLTk3LjIgMC0xNzYgNzguOC0xNzYgMTc2czc4LjggMTc2IDE3NiAxNzYgMTc2LTc4LjggMTc2LTE3Ni03OC44LTE3Ni0xNzYtMTc2em03OS4yIDI1NS4yQTExMS42IDExMS42IDAgMDE1MTIgNTUxYy0yOS45IDAtNTgtMTEuNy03OS4yLTMyLjhBMTExLjYgMTExLjYgMCAwMTQwMCA0MzljMC0yOS45IDExLjctNTggMzIuOC03OS4yQzQ1NCAzMzguNiA0ODIuMSAzMjcgNTEyIDMyN2MyOS45IDAgNTggMTEuNiA3OS4yIDMyLjhDNjEyLjQgMzgxIDYyNCA0MDkuMSA2MjQgNDM5YzAgMjkuOS0xMS42IDU4LTMyLjggNzkuMnoiIC8+PC9zdmc+) */ var RefIcon = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["forwardRef"](EnvironmentOutlined);
+if ("TURBOPACK compile-time truthy", 1) {
+    RefIcon.displayName = 'EnvironmentOutlined';
+}
+const __TURBOPACK__default__export__ = RefIcon;
+}),
+"[project]/node_modules/@ant-design/icons/es/icons/EnvironmentOutlined.js [app-client] (ecmascript) <export default as EnvironmentOutlined>", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "EnvironmentOutlined",
+    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$EnvironmentOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$EnvironmentOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@ant-design/icons/es/icons/EnvironmentOutlined.js [app-client] (ecmascript)");
+}),
+"[project]/node_modules/@ant-design/icons/es/icons/CheckCircleFilled.js [app-client] (ecmascript) <export default as CheckCircleFilled>", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "CheckCircleFilled",
+    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$CheckCircleFilled$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$CheckCircleFilled$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@ant-design/icons/es/icons/CheckCircleFilled.js [app-client] (ecmascript)");
+}),
+"[project]/node_modules/@ant-design/icons-svg/es/asn/InfoCircleOutlined.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// This icon file is generated automatically.
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var InfoCircleOutlined = {
+    "icon": {
+        "tag": "svg",
+        "attrs": {
+            "viewBox": "64 64 896 896",
+            "focusable": "false"
+        },
+        "children": [
+            {
+                "tag": "path",
+                "attrs": {
+                    "d": "M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                }
+            },
+            {
+                "tag": "path",
+                "attrs": {
+                    "d": "M464 336a48 48 0 1096 0 48 48 0 10-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"
+                }
+            }
+        ]
+    },
+    "name": "info-circle",
+    "theme": "outlined"
+};
+const __TURBOPACK__default__export__ = InfoCircleOutlined;
+}),
+"[project]/node_modules/@ant-design/icons/es/icons/InfoCircleOutlined.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$babel$2f$runtime$2f$helpers$2f$esm$2f$extends$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@babel/runtime/helpers/esm/extends.js [app-client] (ecmascript)");
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2d$svg$2f$es$2f$asn$2f$InfoCircleOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@ant-design/icons-svg/es/asn/InfoCircleOutlined.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$components$2f$AntdIcon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@ant-design/icons/es/components/AntdIcon.js [app-client] (ecmascript)");
+;
+;
+;
+;
+var InfoCircleOutlined = function InfoCircleOutlined(props, ref) {
+    return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createElement"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$components$2f$AntdIcon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$babel$2f$runtime$2f$helpers$2f$esm$2f$extends$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])({}, props, {
+        ref: ref,
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2d$svg$2f$es$2f$asn$2f$InfoCircleOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
+    }));
+};
+/**![info-circle](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUxMiA2NEMyNjQuNiA2NCA2NCAyNjQuNiA2NCA1MTJzMjAwLjYgNDQ4IDQ0OCA0NDggNDQ4LTIwMC42IDQ0OC00NDhTNzU5LjQgNjQgNTEyIDY0em0wIDgyMGMtMjA1LjQgMC0zNzItMTY2LjYtMzcyLTM3MnMxNjYuNi0zNzIgMzcyLTM3MiAzNzIgMTY2LjYgMzcyIDM3Mi0xNjYuNiAzNzItMzcyIDM3MnoiIC8+PHBhdGggZD0iTTQ2NCAzMzZhNDggNDggMCAxMDk2IDAgNDggNDggMCAxMC05NiAwem03MiAxMTJoLTQ4Yy00LjQgMC04IDMuNi04IDh2MjcyYzAgNC40IDMuNiA4IDggOGg0OGM0LjQgMCA4LTMuNiA4LThWNDU2YzAtNC40LTMuNi04LTgtOHoiIC8+PC9zdmc+) */ var RefIcon = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["forwardRef"](InfoCircleOutlined);
+if ("TURBOPACK compile-time truthy", 1) {
+    RefIcon.displayName = 'InfoCircleOutlined';
+}
+const __TURBOPACK__default__export__ = RefIcon;
+}),
+"[project]/node_modules/@ant-design/icons/es/icons/InfoCircleOutlined.js [app-client] (ecmascript) <export default as InfoCircleOutlined>", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "InfoCircleOutlined",
+    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$InfoCircleOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$ant$2d$design$2f$icons$2f$es$2f$icons$2f$InfoCircleOutlined$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@ant-design/icons/es/icons/InfoCircleOutlined.js [app-client] (ecmascript)");
+}),
+]);
+
+//# sourceMappingURL=_8a422c6c._.js.map

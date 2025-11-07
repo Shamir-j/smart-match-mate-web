@@ -1,0 +1,4 @@
+{
+  "/(authenticated)/app/page": "app/(authenticated)/app/page.js",
+  "/(authenticated)/swipe/page": "app/(authenticated)/swipe/page.js"
+}

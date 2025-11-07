@@ -1,0 +1,75 @@
+[00:00:01.309] Server  LOG      ✓ Ready in 1118ms
+[00:00:06.856] Server  LOG      ○ Compiling /swipe ...
+[00:00:09.009] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /swipe. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[00:00:35.240] Server  LOG      ✓ Compiled in 18ms
+[00:00:41.008] Server  LOG      ✓ Compiled in 7ms
+[00:00:44.023] Server  LOG      ✓ Compiled in 7ms
+[00:00:48.865] Server  LOG      ✓ Compiled in 8ms
+[00:00:51.839] Server  LOG      ✓ Compiled in 8ms
+[00:00:55.455] Server  LOG      ✓ Compiled in 14ms
+[00:01:23.354] Server  LOG      ✓ Compiled in 12ms
+[00:01:23.457] Browser ERROR   ./src/app/(authenticated)/swipe/page.tsx:53:131
+Parsing ecmascript source code failed
+  51 |         {/* Main swipe area */}
+  52 |         <div
+> 53 |           style={{position: 'relative',justifyContent: 'center',  alignItems: 'center', width: '100%',  height: '100%  maxWidth: '100%',
+     |                                                                                                                                   ^^^
+  54 |             margin: '0 auto',
+  55 |             overflow: 'hidden',
+  56 |           }}
+
+Expected '</', got 'numeric literal (100, 100)'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(authenticated)/swipe/page.tsx [Client Component Browser]
+    ./src/app/(authenticated)/swipe/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(authenticated)/swipe/page.tsx [Client Component SSR]
+    ./src/app/(authenticated)/swipe/page.tsx [Server Component]
+[00:01:24.702] Server  LOG      ✓ Compiled in 11ms
+[00:01:24.803] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /swipe. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[00:01:26.569] Server  LOG      ✓ Compiled in 9ms
+[00:01:29.468] Server  LOG      ✓ Compiled in 9ms
+[00:01:32.607] Server  LOG      ✓ Compiled in 6ms
+[00:01:35.062] Server  LOG      ✓ Compiled in 9ms
+[00:01:39.393] Server  LOG      ✓ Compiled in 9ms
+[00:01:44.870] Server  LOG      ✓ Compiled in 11ms
+[00:01:44.971] Browser ERROR   ./src/app/(authenticated)/swipe/page.tsx:54:9
+Parsing ecmascript source code failed
+  52 |         <div
+  53 |           style={{ position: 'relative', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%', maxWidth: '100%', margin: '0 auto', overflow: 'hidden', }}>
+> 54 |         >
+     |         ^
+  55 |           {cards.length === 0 ? (
+  56 |             <Space direction="vertical" align="center" style={{ height: '100%', justifyContent: 'center', background: '#0a0a12', }}>
+  57 |               <Flex
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(authenticated)/swipe/page.tsx [Client Component Browser]
+    ./src/app/(authenticated)/swipe/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(authenticated)/swipe/page.tsx [Client Component SSR]
+    ./src/app/(authenticated)/swipe/page.tsx [Server Component]
+[00:01:47.173] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /swipe. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[00:02:30.279] Server  LOG      ✓ Compiled in 8ms
+[00:02:37.419] Server  LOG      ✓ Compiled in 9ms
+[00:03:14.750] Server  LOG      ✓ Compiled in 7ms
+[00:03:18.057] Server  LOG      ✓ Compiled in 7ms
+[00:03:26.753] Server  LOG      ✓ Compiled in 6ms
+[00:03:29.503] Server  LOG      ✓ Compiled in 6ms
+[00:03:36.151] Server  LOG      ✓ Compiled in 7ms
+[00:03:42.903] Browser ERROR   Warning: [antd: compatible] antd v5 support React is 16 ~ 18. see https://u.ant.design/v5-for-19 for compatible.
+[00:03:43.390] Browser ERROR   Warning: [antd: Card] `bodyStyle` is deprecated. Please use `styles.body` instead.
+[00:03:43.390] Browser ERROR   Warning: [antd: Card] `bordered` is deprecated. Please use `variant` instead.
+[00:05:31.510] Server  LOG      ○ Compiling /app ...
+[00:05:33.808] Server  WARN     ⚠ Unsupported metadata viewport is configured in metadata export in /app. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
