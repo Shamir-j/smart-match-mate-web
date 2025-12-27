@@ -1,9 +1,10 @@
 import { Row, Col, Space } from "antd";
 import { InstagramOutlined, TwitterOutlined, YoutubeOutlined, FacebookOutlined, } from "@ant-design/icons";
 import Text from "antd/es/typography/Text";
-import Link from "antd/es/typography/Link";
+import AntLink from "antd/es/typography/Link";
 import Paragraph from "antd/es/typography/Paragraph";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
     const year = new Date().getFullYear();
@@ -21,42 +22,42 @@ export default function Footer() {
             <Row gutter={[32, 24]} justify="space-between">
                 <Col xs={24} md={6}>
                     <h4 style={{ fontWeight: 600, marginBottom: 12 }}>Legal</h4>
-                    <Space direction="vertical">
-                        <Link href="#">Privacy</Link>
-                        <Link href="#">Consumer Health Data Privacy Policy</Link>
-                        <Link href="#">Terms</Link>
-                        <Link href="#">Cookie Policy</Link>
-                        <Link href="#">Intellectual Property</Link>
-                        <Link href="#">Accessibility Statement</Link>
+                    <Space orientation="vertical">
+                        <Link href="/privacy-notice"><AntLink>Privacy Notice</AntLink></Link>
+                        <Link href="/consumer-health-privacy"><AntLink>Consumer Health Data Privacy Policy</AntLink></Link>
+                        <Link href="/terms-of-service"><AntLink>Terms of Service</AntLink></Link>
+                        <Link href="/cookie-policy"><AntLink>Cookie Policy</AntLink></Link>
+                        <Link href="/intellectual-property"><AntLink>Intellectual Property</AntLink></Link>
+                        <Link href="/accessibility"><AntLink>Accessibility Statement</AntLink></Link>
                     </Space>
                 </Col>
 
                 <Col xs={24} md={6}>
                     <h4 style={{ fontWeight: 600, marginBottom: 12 }}>Careers</h4>
-                    <Space direction="vertical">
-                        <Link href="#">Careers Portal</Link>
-                        <Link href="#">Tech Blog</Link>
+                    <Space orientation="vertical">
+                        <AntLink href="#">Careers Portal</AntLink>
+                        <AntLink href="#">Tech Blog</AntLink>
                     </Space>
                 </Col>
 
                 <Col xs={24} md={6}>
                     <h4 style={{ fontWeight: 600, marginBottom: 12 }}>Social</h4>
                     <Space size="large">
-                        <Link href="#"><InstagramOutlined style={{ fontSize: 20 }} /></Link>
-                        <Link href="#"><TwitterOutlined style={{ fontSize: 20 }} /></Link>
-                        <Link href="#"><YoutubeOutlined style={{ fontSize: 20 }} /></Link>
-                        <Link href="#"><FacebookOutlined style={{ fontSize: 20 }} /></Link>
+                        <AntLink href="#"><InstagramOutlined style={{ fontSize: 20 }} /></AntLink>
+                        <AntLink href="#"><TwitterOutlined style={{ fontSize: 20 }} /></AntLink>
+                        <AntLink href="#"><YoutubeOutlined style={{ fontSize: 20 }} /></AntLink>
+                        <AntLink href="#"><FacebookOutlined style={{ fontSize: 20 }} /></AntLink>
                     </Space>
                 </Col>
 
                 <Col xs={24} md={6}>
                     <h4 style={{ fontWeight: 600, marginBottom: 12 }}>More</h4>
-                    <Space direction="vertical">
-                        <Link href="#">FAQ</Link>
-                        <Link href="#">Destinations</Link>
-                        <Link href="#">Press Room</Link>
-                        <Link href="#">Contact</Link>
-                        <Link href="#">Promo Code</Link>
+                    <Space orientation="vertical">
+                        <AntLink href="#">FAQ</AntLink>
+                        <AntLink href="#">Destinations</AntLink>
+                        <AntLink href="#">Press Room</AntLink>
+                        <AntLink href="#">Contact</AntLink>
+                        <AntLink href="#">Promo Code</AntLink>
                     </Space>
                 </Col>
             </Row>
@@ -102,11 +103,11 @@ export default function Footer() {
             {/* Bottom links */}
             <div style={{ textAlign: "center", marginBottom: "1rem" }}>
                 <Space size="middle" wrap>
-                    <Link href="#">FAQ</Link>
-                    <Link href="#">Safety Tips</Link>
-                    <Link href="#">Terms</Link>
-                    <Link href="#">Cookie Policy</Link>
-                    <Link href="#">Privacy Settings</Link>
+                    <AntLink href="/faq">FAQ</AntLink>
+                    <AntLink href="/safety-tips">Safety Tips</AntLink>
+                    <Link href="/terms-of-service"><AntLink>Terms of Service</AntLink></Link>
+                    <AntLink href="/cookie-policy">Cookie Policy</AntLink>
+                    <Link href="/privacy-notice"><AntLink>Privacy Settings</AntLink></Link>
                 </Space>
             </div>
 

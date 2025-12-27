@@ -8,16 +8,16 @@ import Title from "antd/es/typography/Title";
 export default function Waitlist() {
     const onFinish = (values: { email: string }) => {
         console.log("Waitlist signup:", values.email);
-        
+
         // Track the waitlist signup
-        if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'waitlist_signup', {
+        if (globalThis.window !== undefined && (globalThis.window as any).gtag) {
+            (globalThis.window as any).gtag('event', 'waitlist_signup', {
                 event_category: 'conversion',
                 event_label: 'iOS Waitlist',
                 value: 1
             });
         }
-        
+
         // TODO: Hook up API call here
         // Example API call:
         // fetch('/api/waitlist', {
