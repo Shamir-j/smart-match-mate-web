@@ -95,6 +95,9 @@ export default function ConsumerHealthPrivacy() {
                     <Text strong>Gender Identity:</Text> Information about your gender identity and expression.
                   </li>
                   <li>
+                    <Text strong>Biometric Data:</Text> Facial geometry data used for identity verification purposes (e.g., "selfie verification").
+                  </li>
+                  <li>
                     <Text strong>Inferences:</Text> Inferences drawn from other information that may reveal health status or sexual orientation.
                   </li>
                 </ul>

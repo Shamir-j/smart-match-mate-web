@@ -99,24 +99,26 @@ export default function PrivacyPolicy() {
 
                 <Title level={4}>3.1 Information You Provide</Title>
                 <ul>
-                  <li>Account information (email, phone number, date of birth)</li>
-                  <li>Profile data (photos, bio, gender, preferences)</li>
-                  <li>Communications with other users or support</li>
-                  <li>Payment and subscription information (if applicable)</li>
+                  <li><Text strong>Account Credentials:</Text> Login details, email, phone number, and date of birth.</li>
+                  <li><Text strong>Profile Data:</Text> Photos, bio, gender, interests, sexual orientation, and preferences.</li>
+                  <li><Text strong>Content:</Text> Messages, photos, and other content you share with other users.</li>
+                  <li><Text strong>Verification Data:</Text> If you choose to verify your account, we may collect facial geometry data (biometrics) to confirm you match your photos.</li>
+                  <li><Text strong>Payment Data:</Text> Credit card or other payment information (processed by third-party providers).</li>
                 </ul>
 
                 <Title level={4}>3.2 Information Collected Automatically</Title>
                 <ul>
-                  <li>Device identifiers, IP address, browser type</li>
-                  <li>Usage data (swipes, matches, interactions)</li>
-                  <li>Approximate or precise location (with permission)</li>
-                  <li>Cookies and similar tracking technologies</li>
+                  <li><Text strong>Device Information:</Text> IP address, device ID, device type, and app settings.</li>
+                  <li><Text strong>Usage Data:</Text> Swipes, matches, time spent, and features used.</li>
+                  <li><Text strong>Geolocation:</Text> Precise location data (GPS) to show you nearby matches, if you grant permission.</li>
+                  <li><Text strong>Cookies:</Text> Data collected via cookies and similar technologies.</li>
                 </ul>
 
                 <Title level={4}>3.3 Information from Third Parties</Title>
                 <ul>
                   <li>Social login providers (e.g., Google, Apple)</li>
-                  <li>Analytics and advertising partners</li>
+                  <li>Background check providers (where legally permitted and applicable)</li>
+                  <li>Advertising partners</li>
                 </ul>
               </div>
 
@@ -125,12 +127,12 @@ export default function PrivacyPolicy() {
                 <Title level={2}>4. How We Use Your Information</Title>
                 <Paragraph>We use personal data to:</Paragraph>
                 <ul>
-                  <li>Provide and improve matchmaking and social features</li>
-                  <li>Operate, maintain, and secure the Services</li>
-                  <li>Personalize user experience</li>
-                  <li>Process payments and subscriptions</li>
-                  <li>Enforce our Terms of Use</li>
-                  <li>Comply with legal obligations</li>
+                  <li><Text strong>Provide Services:</Text> Create and manage your account, provide customer support, and complete transactions.</li>
+                  <li><Text strong>Matchmaking:</Text> Analyze your profile and activity to recommend relevant matches.</li>
+                  <li><Text strong>Safety & Security:</Text> Detect and prevent fraud, spam, abuse, security incidents, and other harmful activity. We may scan messages and content for violations of our Terms.</li>
+                  <li><Text strong>Improvement:</Text> Conduct research and analysis to improve our services and develop new features.</li>
+                  <li><Text strong>Marketing:</Text> Deliver relevant ads and promotional content (with your consent where required).</li>
+                  <li><Text strong>Legal Compliance:</Text> Comply with legal obligations and assist law enforcement.</li>
                 </ul>
               </div>
 

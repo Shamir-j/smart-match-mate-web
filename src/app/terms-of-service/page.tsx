@@ -96,8 +96,14 @@ export default function TermsOfUse() {
               <div id="eligibility">
                 <Title level={2}>3. Eligibility</Title>
                 <Paragraph>
-                  You must be at least <Text strong>18 years old</Text> to use the Services. By using the Services, you represent and warrant that you meet this requirement.
+                  You must be at least <Text strong>18 years old</Text> to use the Services. By using the Services, you represent and warrant that:
                 </Paragraph>
+                <ul>
+                  <li>You can form a binding contract with One Night Stand.</li>
+                  <li>You are not a person who is barred from using the Service under the laws of the United States or any other applicable jurisdiction.</li>
+                  <li>You will comply with this Agreement and all applicable local, state, national and international laws, rules and regulations.</li>
+                  <li>You have never been convicted of or pled no contest to a felony, a sex crime, or any crime involving violence, and that you are not required to register as a sex offender with any state, federal or local sex offender registry.</li>
+                </ul>
               </div>
 
               {/* Section 4 */}
@@ -111,12 +117,21 @@ export default function TermsOfUse() {
               {/* Section 5 */}
               <div id="conduct">
                 <Title level={2}>5. User Conduct</Title>
-                <Paragraph>You agree not to:</Paragraph>
+                <Paragraph>You agree to treat other users with courtesy and respect. You agree not to:</Paragraph>
                 <ul>
-                  <li>Harass, abuse, or harm other users</li>
-                  <li>Use the Services for illegal or fraudulent purposes</li>
-                  <li>Post misleading, offensive, or unlawful content</li>
-                  <li>Use bots, scrapers, or automated systems</li>
+                  <li>Use the Service for any purpose that is illegal or prohibited by this Agreement.</li>
+                  <li>Use the Service for any harmful or nefarious purpose.</li>
+                  <li>Use the Service in order to damage One Night Stand.</li>
+                  <li>Violate our Community Guidelines, as updated from time to time.</li>
+                  <li>Spam, solicit money from or defraud any members.</li>
+                  <li>Impersonate any person or entity or post any images of another person without his or her permission.</li>
+                  <li>Bully, "stalk," intimidate, assault, harass, mistreat or defame any person.</li>
+                  <li>Post any content that violates or infringes anyone's rights, including rights of publicity, privacy, copyright, trademark or other intellectual property or contract right.</li>
+                  <li>Post any content that is hate speech, threatening, sexually explicit or pornographic; incites violence; or contains nudity or graphic or gratuitous violence.</li>
+                  <li>Post any content that promotes racism, bigotry, hatred or physical harm of any kind against any group or individual.</li>
+                  <li>Solicit passwords for any purpose, or personal identifying information for commercial or unlawful purposes from other users or disseminate another person's personal information without his or her permission.</li>
+                  <li>Use another user's account, share an account with another user, or maintain more than one account.</li>
+                  <li>Create another account if we have already terminated your account, unless you have our permission.</li>
                 </ul>
               </div>
 
@@ -145,7 +160,13 @@ export default function TermsOfUse() {
               <div id="payments">
                 <Title level={2}>8. Subscriptions and Payments</Title>
                 <Paragraph>
-                  Paid features, if offered, are billed according to the terms presented at purchase. All payments are non-refundable unless required by law.
+                  <Text strong>Auto-Renewal:</Text> If you purchase an auto-recurring periodic subscription, your Payment Method will continue to be billed for the subscription until you cancel. After your initial subscription commitment period, and again after any subsequent subscription period, your subscription will automatically continue for an additional equivalent period, at the price you agreed to when subscribing.
+                </Paragraph>
+                <Paragraph>
+                  <Text strong>App Store Purchases:</Text> If you purchased a subscription through an App Store (e.g., Apple App Store or Google Play), you will need to access your account with that App Store to manage or cancel your subscription.
+                </Paragraph>
+                <Paragraph>
+                  <Text strong>Refunds:</Text> Generally, all charges for purchases are nonrefundable, and there are no refunds or credits for partially used periods. We may make an exception if a refund for a subscription offering is requested within fourteen days of the transaction date, or if the laws applicable in your jurisdiction provide for refunds.
                 </Paragraph>
               </div>
 
