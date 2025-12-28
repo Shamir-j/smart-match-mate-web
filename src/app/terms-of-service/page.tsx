@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { Layout, Typography, Anchor, Space, Divider, Row, Col, Alert } from "antd";
-import { ArrowLeftOutlined, WarningOutlined } from "@ant-design/icons";
+import { WarningOutlined } from "@ant-design/icons";
 import Footer from "@/components/Footer";
 
 const { Content } = Layout;
@@ -10,28 +9,7 @@ const { Title, Paragraph, Text } = Typography;
 
 export default function TermsOfUse() {
   return (
-    <Layout style={{ minHeight: "100vh", background: "#fff" }}>
-      {/* Top Navigation Bar */}
-      <div style={{
-        borderBottom: "1px solid #f0f0f0",
-        padding: "16px 24px",
-        position: "sticky",
-        top: 0,
-        background: "#fff",
-        zIndex: 100,
-        boxShadow: "0 2px 8px rgba(0,0,0,0.06)"
-      }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <Link href="/" style={{ display: "flex", alignItems: "center", gap: 8, color: "#FF3A8A", textDecoration: "none" }}>
-            <ArrowLeftOutlined />
-            <span>Back to Home</span>
-          </Link>
-          <Link href="/privacy-notice" style={{ color: "#FF3A8A", textDecoration: "none" }}>
-            Privacy Policy
-          </Link>
-        </div>
-      </div>
-
+    <Layout style={{ minHeight: "100vh", background: "#fff", paddingTop: "80px" }}>
       <Content style={{ padding: "48px 24px", maxWidth: 1400, margin: "0 auto", width: "100%" }}>
         <Row gutter={[48, 48]}>
           {/* Sidebar with Table of Contents */}
@@ -139,8 +117,19 @@ export default function TermsOfUse() {
               <div id="content">
                 <Title level={2}>6. User Content</Title>
                 <Paragraph>
-                  You retain ownership of content you post. By posting content, you grant One Night Stand a non-exclusive, worldwide, royalty-free license to host, display, and distribute such content within the Services.
+                  You retain ownership of the content you post. However, by posting content, you grant One Night Stand a <Text strong>worldwide, transferable, sub-licensable, royalty-free, right and license</Text> to host, store, use, copy, display, reproduce, adapt, edit, publish, modify, and distribute such content. This license includes the right to use your content for operating, developing, providing, promoting, and improving the Services.
                 </Paragraph>
+                <Paragraph>
+                  <Text strong>Monitoring:</Text> We have the right, but not the obligation, to monitor all conduct on and content submitted to the Service. We reserve the right to remove any content at any time, for any reason, without notice.
+                </Paragraph>
+                <Paragraph>
+                  <Text strong>Warranties:</Text> You represent and warrant that:
+                </Paragraph>
+                <ul>
+                  <li>You own the Content or have the right to grant the license set forth in this section.</li>
+                  <li>The Content does not violate the privacy rights, publicity rights, copyrights, contract rights, or any other rights of any person.</li>
+                  <li>The Content is not defamatory, obscene, pornographic, or otherwise offensive.</li>
+                </ul>
               </div>
 
               {/* Section 7 */}

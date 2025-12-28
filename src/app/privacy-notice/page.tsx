@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import { Layout, Typography, Anchor, Space, Divider, Row, Col, Card } from "antd";
-import { ArrowLeftOutlined } from "@ant-design/icons";
 import Footer from "@/components/Footer";
 
 const { Content } = Layout;
@@ -10,28 +8,7 @@ const { Title, Paragraph, Text } = Typography;
 
 export default function PrivacyPolicy() {
   return (
-    <Layout style={{ minHeight: "100vh", background: "#fff" }}>
-      {/* Top Navigation Bar */}
-      <div style={{
-        borderBottom: "1px solid #f0f0f0",
-        padding: "16px 24px",
-        position: "sticky",
-        top: 0,
-        background: "#fff",
-        zIndex: 100,
-        boxShadow: "0 2px 8px rgba(0,0,0,0.06)"
-      }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <Link href="/" style={{ display: "flex", alignItems: "center", gap: 8, color: "#FF3A8A", textDecoration: "none" }}>
-            <ArrowLeftOutlined />
-            <span>Back to Home</span>
-          </Link>
-          <Link href="/terms-of-service" style={{ color: "#FF3A8A", textDecoration: "none" }}>
-            Terms of Use
-          </Link>
-        </div>
-      </div>
-
+    <Layout style={{ minHeight: "100vh", background: "#fff", paddingTop: "80px" }}>
       <Content style={{ padding: "48px 24px", maxWidth: 1400, margin: "0 auto", width: "100%" }}>
         <Row gutter={[48, 48]}>
           {/* Sidebar with Table of Contents */}
@@ -166,7 +143,10 @@ export default function PrivacyPolicy() {
               <div id="content">
                 <Title level={2}>7. User Content and Visibility</Title>
                 <Paragraph>
-                  Profiles and certain information are visible to other users. You are responsible for the content you choose to share. We strongly discourage sharing sensitive personal information publicly.
+                  <Text strong>Public Nature of Content:</Text> Profiles, photos, and other content you post are visible to other users of the Service. We cannot control how other users or third parties use your content once it is public (e.g., screenshots).
+                </Paragraph>
+                <Paragraph>
+                  <Text strong>Moderation:</Text> We use automated systems and human moderators to review content for violations of our policies. Content that violates our standards may be removed, and we may use such content to train our safety algorithms.
                 </Paragraph>
               </div>
 

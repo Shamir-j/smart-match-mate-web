@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ paddingTop: '80px' }}>
       <HeroSection />
       <HowItWorks />
       <Features />

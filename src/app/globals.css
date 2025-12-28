@@ -40,3 +40,24 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Header Responsive Utilities */
+.header-desktop {
+  display: flex !important;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-mobile-btn {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .header-desktop {
+    display: none !important;
+  }
+  
+  .header-mobile-btn {
+    display: block !important;
+  }
+}

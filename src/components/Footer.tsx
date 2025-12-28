@@ -23,12 +23,12 @@ export default function Footer() {
                 <Col xs={24} md={6}>
                     <h4 style={{ fontWeight: 600, marginBottom: 12 }}>Legal</h4>
                     <Space orientation="vertical">
-                        <Link href="/privacy-notice"><AntLink>Privacy Notice</AntLink></Link>
-                        <Link href="/consumer-health-privacy"><AntLink>Consumer Health Data Privacy Policy</AntLink></Link>
-                        <Link href="/terms-of-service"><AntLink>Terms of Service</AntLink></Link>
-                        <Link href="/cookie-policy"><AntLink>Cookie Policy</AntLink></Link>
-                        <Link href="/intellectual-property"><AntLink>Intellectual Property</AntLink></Link>
-                        <Link href="/accessibility"><AntLink>Accessibility Statement</AntLink></Link>
+                        <Link href="/privacy-notice" style={{ color: '#1677ff', textDecoration: 'none' }}>Privacy Notice</Link>
+                        <Link href="/consumer-health-privacy" style={{ color: '#1677ff', textDecoration: 'none' }}>Consumer Health Data Privacy Policy</Link>
+                        <Link href="/terms-of-service" style={{ color: '#1677ff', textDecoration: 'none' }}>Terms of Service</Link>
+                        <Link href="/cookie-policy" style={{ color: '#1677ff', textDecoration: 'none' }}>Cookie Policy</Link>
+                        <Link href="/intellectual-property" style={{ color: '#1677ff', textDecoration: 'none' }}>Intellectual Property</Link>
+                        <Link href="/accessibility" style={{ color: '#1677ff', textDecoration: 'none' }}>Accessibility Statement</Link>
                     </Space>
                 </Col>
 

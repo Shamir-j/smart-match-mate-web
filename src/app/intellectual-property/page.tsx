@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Layout, Typography, Anchor, Space, Divider, Row, Col, Card } from "antd";
-import { ArrowLeftOutlined, CopyrightOutlined } from "@ant-design/icons";
+import { CopyrightOutlined } from "@ant-design/icons";
 import Footer from "../../components/Footer";
 
 const { Content } = Layout;
@@ -10,28 +10,7 @@ const { Title, Paragraph, Text } = Typography;
 
 export default function IntellectualProperty() {
     return (
-        <Layout style={{ minHeight: "100vh", background: "#fff" }}>
-            {/* Top Navigation Bar */}
-            <div style={{
-                borderBottom: "1px solid #f0f0f0",
-                padding: "16px 24px",
-                position: "sticky",
-                top: 0,
-                background: "#fff",
-                zIndex: 100,
-                boxShadow: "0 2px 8px rgba(0,0,0,0.06)"
-            }}>
-                <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                    <Link href="/" style={{ display: "flex", alignItems: "center", gap: 8, color: "#FF3A8A", textDecoration: "none" }}>
-                        <ArrowLeftOutlined />
-                        <span>Back to Home</span>
-                    </Link>
-                    <Link href="/terms-of-service" style={{ color: "#FF3A8A", textDecoration: "none" }}>
-                        Terms of Use
-                    </Link>
-                </div>
-            </div>
-
+        <Layout style={{ minHeight: "100vh", background: "#fff", paddingTop: "80px" }}>
             <Content style={{ padding: "48px 24px", maxWidth: 1400, margin: "0 auto", width: "100%" }}>
                 <Row gutter={[48, 48]}>
                     {/* Sidebar with Table of Contents */}
@@ -93,9 +72,9 @@ export default function IntellectualProperty() {
 
                             {/* Section 3 */}
                             <div id="user-content">
-                                <Title level={2}>3. User Content</Title>
+                                <Title level={2}>3. User Content License</Title>
                                 <Paragraph>
-                                    You retain all rights to the content you post on One Night Stand. However, by posting content, you grant us a worldwide, non-exclusive, royalty-free, sublicensable, and transferable license to use, reproduce, distribute, prepare derivative works of, display, and perform that content in connection with the Service.
+                                    While you retain ownership of your content, you grant One Night Stand a broad license to use it for the operation and promotion of the Service, as detailed in our <Link href="/terms-of-service" style={{ color: "#FF3A8A" }}>Terms of Use</Link>. This includes the right to host, display, modify, and distribute your content.
                                 </Paragraph>
                             </div>
 
