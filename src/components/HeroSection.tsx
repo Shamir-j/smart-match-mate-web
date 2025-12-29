@@ -46,7 +46,7 @@ export default function HeroSection() {
                     }}
                 >
                     <a
-                        href="https://play.google.com/store/apps/details?id=com.continuummtechnologies.onenightstand&hl=en"
+                        href="https://play.google.com/store/apps/details?id=com.quantum.times.technologies.onenightstand&hl=en"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ textDecoration: "none" }}

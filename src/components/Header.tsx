@@ -103,7 +103,7 @@ export default function Header() {
               fontWeight: 'bold',
               boxShadow: '0 4px 14px rgba(255, 58, 138, 0.4)'
             }}
-            href="https://play.google.com/store/apps/details?id=com.continuummtechnologies.onenightstand&hl=en"
+            href="https://play.google.com/store/apps/details?id=com.quantum.times.technologies.onenightstand&hl=en"
             target="_blank"
           >
             Download
@@ -166,7 +166,7 @@ export default function Header() {
               fontWeight: 'bold',
               marginTop: '16px'
             }}
-            href="https://play.google.com/store/apps/details?id=com.continuummtechnologies.onenightstand&hl=en"
+            href="https://play.google.com/store/apps/details?id=com.quantum.times.technologies.onenightstand&hl=en"
             target="_blank"
           >
             Download App
