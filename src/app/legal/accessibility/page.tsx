@@ -2,7 +2,7 @@
 
 import { Layout, Typography, Anchor, Space, Divider, Row, Col, Alert } from "antd";
 import { CheckCircleOutlined } from "@ant-design/icons";
-import Footer from "../../components/Footer";
+import Footer from "../../../components/Footer";
 
 const { Content } = Layout;
 const { Title, Paragraph, Text } = Typography;

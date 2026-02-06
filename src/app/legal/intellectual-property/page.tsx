@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Layout, Typography, Anchor, Space, Divider, Row, Col, Card } from "antd";
 import { CopyrightOutlined } from "@ant-design/icons";
-import Footer from "../../components/Footer";
+import Footer from "../../../components/Footer";
 
 const { Content } = Layout;
 const { Title, Paragraph, Text } = Typography;
@@ -74,7 +74,7 @@ export default function IntellectualProperty() {
                             <div id="user-content">
                                 <Title level={2}>3. User Content License</Title>
                                 <Paragraph>
-                                    While you retain ownership of your content, you grant One Night Stand a broad license to use it for the operation and promotion of the Service, as detailed in our <Link href="/terms-of-service" style={{ color: "#FF3A8A" }}>Terms of Use</Link>. This includes the right to host, display, modify, and distribute your content.
+                                    While you retain ownership of your content, you grant One Night Stand a broad license to use it for the operation and promotion of the Service, as detailed in our <Link href="/legal/terms-of-service" style={{ color: "#FF3A8A" }}>Terms of Use</Link> and <Link href="/legal/user-generated-content" style={{ color: "#FF3A8A" }}>User-Generated Content Policy</Link>. This includes the right to host, display, modify, and distribute your content.
                                 </Paragraph>
                             </div>
 

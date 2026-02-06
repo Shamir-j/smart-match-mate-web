@@ -1,7 +1,7 @@
 "use client";
 
 import { Layout, Typography, Anchor, Space, Divider, Row, Col, Table } from "antd";
-import Footer from "../../components/Footer";
+import Footer from "../../../components/Footer";
 
 const { Content } = Layout;
 const { Title, Paragraph, Text } = Typography;

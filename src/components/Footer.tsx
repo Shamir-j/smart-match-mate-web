@@ -23,12 +23,13 @@ export default function Footer() {
                 <Col xs={24} md={6}>
                     <h4 style={{ fontWeight: 600, marginBottom: 12 }}>Legal</h4>
                     <Space orientation="vertical">
-                        <Link href="/privacy-notice" style={{ color: '#1677ff', textDecoration: 'none' }}>Privacy Notice</Link>
-                        <Link href="/consumer-health-privacy" style={{ color: '#1677ff', textDecoration: 'none' }}>Consumer Health Data Privacy Policy</Link>
-                        <Link href="/terms-of-service" style={{ color: '#1677ff', textDecoration: 'none' }}>Terms of Service</Link>
-                        <Link href="/cookie-policy" style={{ color: '#1677ff', textDecoration: 'none' }}>Cookie Policy</Link>
-                        <Link href="/intellectual-property" style={{ color: '#1677ff', textDecoration: 'none' }}>Intellectual Property</Link>
-                        <Link href="/accessibility" style={{ color: '#1677ff', textDecoration: 'none' }}>Accessibility Statement</Link>
+                        <Link href="/legal/privacy-notice" style={{ color: '#1677ff', textDecoration: 'none' }}>Privacy Notice</Link>
+                        <Link href="/legal/consumer-health-privacy" style={{ color: '#1677ff', textDecoration: 'none' }}>Consumer Health Data Privacy Policy</Link>
+                        <Link href="/legal/terms-of-service" style={{ color: '#1677ff', textDecoration: 'none' }}>Terms of Service</Link>
+                        <Link href="/legal/cookie-policy" style={{ color: '#1677ff', textDecoration: 'none' }}>Cookie Policy</Link>
+                        <Link href="/legal/intellectual-property" style={{ color: '#1677ff', textDecoration: 'none' }}>Intellectual Property</Link>
+                        <Link href="/legal/user-generated-content" style={{ color: '#1677ff', textDecoration: 'none' }}>User-Generated Content Policy</Link>
+                        <Link href="/legal/accessibility" style={{ color: '#1677ff', textDecoration: 'none' }}>Accessibility Statement</Link>
                     </Space>
                 </Col>
 
@@ -105,9 +106,9 @@ export default function Footer() {
                 <Space size="middle" wrap>
                     <AntLink href="/faq">FAQ</AntLink>
                     <AntLink href="/safety-tips">Safety Tips</AntLink>
-                    <Link href="/terms-of-service"><AntLink>Terms of Service</AntLink></Link>
-                    <AntLink href="/cookie-policy">Cookie Policy</AntLink>
-                    <Link href="/privacy-notice"><AntLink>Privacy Settings</AntLink></Link>
+                    <Link href="/legal/terms-of-service"><AntLink>Terms of Service</AntLink></Link>
+                    <AntLink href="/legal/cookie-policy">Cookie Policy</AntLink>
+                    <Link href="/legal/privacy-notice"><AntLink>Privacy Settings</AntLink></Link>
                 </Space>
             </div>
 
