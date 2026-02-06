@@ -62,7 +62,7 @@ export default function ConsumerHealthPrivacy() {
                                 <Paragraph>
                                     We may collect the following categories of consumer health data:
                                 </Paragraph>
-                                <ul>
+                               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>
                                         <Text strong>Sexual Health Information:</Text> Information about your sexual orientation, sexual preferences, and sexual history that you voluntarily provide in your profile or communications.
                                     </li>
@@ -87,7 +87,7 @@ export default function ConsumerHealthPrivacy() {
                                 <Paragraph>
                                     We collect consumer health data directly from you when you:
                                 </Paragraph>
-                                <ul>
+                               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Create or update your profile.</li>
                                     <li>Participate in surveys or quizzes.</li>
                                     <li>Communicate with other users or our support team.</li>
@@ -101,7 +101,7 @@ export default function ConsumerHealthPrivacy() {
                                 <Paragraph>
                                     We use consumer health data for the following purposes:
                                 </Paragraph>
-                                <ul>
+                               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>To provide and improve our matchmaking services.</li>
                                     <li>To personalize your experience and show you relevant matches.</li>
                                     <li>To ensure the safety and security of our platform.</li>
@@ -118,7 +118,7 @@ export default function ConsumerHealthPrivacy() {
                                 <Paragraph>
                                     We may share consumer health data with:
                                 </Paragraph>
-                                <ul>
+                               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>
                                         <Text strong>Service Providers:</Text> Companies that help us operate our services (e.g., cloud hosting, customer support), bound by strict confidentiality agreements.
                                     </li>
@@ -137,7 +137,7 @@ export default function ConsumerHealthPrivacy() {
                                 <Paragraph>
                                     Depending on your location, you may have the following rights regarding your consumer health data:
                                 </Paragraph>
-                                <ul>
+                               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Right to access your data.</li>
                                     <li>Right to delete your data.</li>
                                     <li>Right to withdraw consent.</li>

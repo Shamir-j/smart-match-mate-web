@@ -75,7 +75,7 @@ export default function PrivacyPolicy() {
                 <Title level={2}>3. Information We Collect</Title>
 
                 <Title level={4}>3.1 Information You Provide</Title>
-                <ul>
+               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                   <li><Text strong>Account Credentials:</Text> Login details, email, phone number, and date of birth.</li>
                   <li><Text strong>Profile Data:</Text> Photos, bio, gender, interests, sexual orientation, and preferences.</li>
                   <li><Text strong>Content:</Text> Messages, photos, and other content you share with other users.</li>
@@ -84,7 +84,7 @@ export default function PrivacyPolicy() {
                 </ul>
 
                 <Title level={4}>3.2 Information Collected Automatically</Title>
-                <ul>
+               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                   <li><Text strong>Device Information:</Text> IP address, device ID, device type, and app settings.</li>
                   <li><Text strong>Usage Data:</Text> Swipes, matches, time spent, and features used.</li>
                   <li><Text strong>Geolocation:</Text> Precise location data (GPS) to show you nearby matches, if you grant permission.</li>
@@ -92,7 +92,7 @@ export default function PrivacyPolicy() {
                 </ul>
 
                 <Title level={4}>3.3 Information from Third Parties</Title>
-                <ul>
+               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                   <li>Social login providers (e.g., Google, Apple)</li>
                   <li>Background check providers (where legally permitted and applicable)</li>
                   <li>Advertising partners</li>
@@ -103,7 +103,7 @@ export default function PrivacyPolicy() {
               <div id="usage">
                 <Title level={2}>4. How We Use Your Information</Title>
                 <Paragraph>We use personal data to:</Paragraph>
-                <ul>
+               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                   <li><Text strong>Provide Services:</Text> Create and manage your account, provide customer support, and complete transactions.</li>
                   <li><Text strong>Matchmaking:</Text> Analyze your profile and activity to recommend relevant matches.</li>
                   <li><Text strong>Safety & Security:</Text> Detect and prevent fraud, spam, abuse, security incidents, and other harmful activity. We may scan messages and content for violations of our Terms.</li>
@@ -117,7 +117,7 @@ export default function PrivacyPolicy() {
               <div id="legal-basis">
                 <Title level={2}>5. Legal Basis for Processing</Title>
                 <Paragraph>Where applicable, we process personal data based on:</Paragraph>
-                <ul>
+               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                   <li>Performance of a contract</li>
                   <li>User consent</li>
                   <li>Legitimate interests</li>
@@ -129,7 +129,7 @@ export default function PrivacyPolicy() {
               <div id="sharing">
                 <Title level={2}>6. Sharing of Information</Title>
                 <Paragraph>We may share information with:</Paragraph>
-                <ul>
+               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                   <li>Service providers and infrastructure partners</li>
                   <li>Analytics and marketing partners (with consent)</li>
                   <li>Law enforcement or regulators where required by law</li>
@@ -170,7 +170,7 @@ export default function PrivacyPolicy() {
               <div id="rights">
                 <Title level={2}>10. Your Rights</Title>
                 <Paragraph>Depending on your jurisdiction, you may have the right to:</Paragraph>
-                <ul>
+               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                   <li>Access your data</li>
                   <li>Request correction or deletion</li>
                   <li>Object to or restrict processing</li>

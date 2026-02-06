@@ -84,7 +84,7 @@ export default function IntellectualProperty() {
                                 <Paragraph>
                                     We respect the intellectual property of others. If you believe that your work has been copied in a way that constitutes copyright infringement, please provide our Copyright Agent with the following information:
                                 </Paragraph>
-                                <ul>
+                               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>An electronic or physical signature of the person authorized to act on behalf of the owner of the copyright interest.</li>
                                     <li>A description of the copyrighted work that you claim has been infringed.</li>
                                     <li>A description of where the material that you claim is infringing is located on the site.</li>

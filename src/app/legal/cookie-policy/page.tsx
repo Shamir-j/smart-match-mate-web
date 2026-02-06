@@ -94,7 +94,7 @@ export default function CookiePolicy() {
                 <Paragraph>
                   We use cookies to:
                 </Paragraph>
-                <ul>
+               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                   <li>Authenticate you and keep you logged in.</li>
                   <li>Remember your preferences and settings.</li>
                   <li>Analyze how you use our services to improve them.</li>

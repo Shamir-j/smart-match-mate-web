@@ -72,7 +72,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     For purposes of this policy, <Text strong>"User-Generated Content"</Text> (or "Content") includes, but is not limited to:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li><Text strong>Profile Information:</Text> Photos, bio, description, interests, preferences, and other profile details.</li>
                                     <li><Text strong>Messages:</Text> Direct messages, chat conversations, and any communication between users.</li>
                                     <li><Text strong>Media:</Text> Photos, videos, voice messages, GIFs, stickers, and other multimedia content.</li>
@@ -101,7 +101,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     By posting Content on or through the Service, you grant One Night Stand a <Text strong>worldwide, non-exclusive, royalty-free, fully paid, transferable, sublicensable license</Text> to:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li><Text strong>Host and Store:</Text> Store your content on our servers and content delivery networks.</li>
                                     <li><Text strong>Display and Distribute:</Text> Display your content to other users based on your privacy settings and the functionality of the Service.</li>
                                     <li><Text strong>Reproduce and Copy:</Text> Create backup copies and technical reproductions necessary for the operation of the Service.</li>
@@ -130,14 +130,14 @@ export default function UserGeneratedContent() {
                                 </Paragraph>
 
                                 <Title level={4}>5.1. Illegal Content</Title>
-                                <ul>
-                                    <li>Violates any local, state, national, or international law or regulation.</li>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
+                                    <li >Violates any local, state, national, or international law or regulation.</li>
                                     <li>Promotes, facilitates, or depicts illegal activities, including drug use, human trafficking, or solicitation.</li>
                                     <li>Contains or promotes child sexual abuse material (CSAM) or exploitation of minors.</li>
                                 </ul>
 
                                 <Title level={4}>5.2. Sexually Explicit Content</Title>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Contains pornographic material, explicit nudity, or sexually explicit imagery.</li>
                                     <li>Depicts sexual acts or sexually suggestive poses.</li>
                                     <li>Includes content intended to sexually arouse viewers.</li>
@@ -145,7 +145,7 @@ export default function UserGeneratedContent() {
                                 </ul>
 
                                 <Title level={4}>5.3. Harmful Content</Title>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Promotes violence, self-harm, suicide, eating disorders, or dangerous activities.</li>
                                     <li>Contains graphic violence, gore, or disturbing imagery.</li>
                                     <li>Depicts or glorifies terrorism or extremist ideologies.</li>
@@ -153,14 +153,14 @@ export default function UserGeneratedContent() {
                                 </ul>
 
                                 <Title level={4}>5.4. Hateful Content</Title>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Promotes hate speech, racism, sexism, homophobia, transphobia, or discrimination of any kind.</li>
                                     <li>Targets individuals or groups based on race, ethnicity, national origin, religion, disability, gender, age, veteran status, or sexual orientation.</li>
                                     <li>Contains slurs, derogatory language, or symbols associated with hate groups.</li>
                                 </ul>
 
                                 <Title level={4}>5.5. Harassment & Abuse</Title>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Bullies, harasses, stalks, intimidates, or threatens other users.</li>
                                     <li>Discloses private information of others without consent (doxxing).</li>
                                     <li>Contains non-consensual intimate images (revenge porn).</li>
@@ -168,7 +168,7 @@ export default function UserGeneratedContent() {
                                 </ul>
 
                                 <Title level={4}>5.6. Spam & Scams</Title>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Contains spam, commercial solicitation, or unsolicited advertising.</li>
                                     <li>Promotes pyramid schemes, multi-level marketing, or get-rich-quick schemes.</li>
                                     <li>Attempts to defraud, phish, or scam other users.</li>
@@ -176,14 +176,14 @@ export default function UserGeneratedContent() {
                                 </ul>
 
                                 <Title level={4}>5.7. Intellectual Property Violations</Title>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Infringes on copyrights, trademarks, trade secrets, or other intellectual property rights.</li>
                                     <li>Uses another person's photos, videos, or content without permission.</li>
                                     <li>Violates rights of publicity or privacy.</li>
                                 </ul>
 
                                 <Title level={4}>5.8. Misleading Content</Title>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Contains false, misleading, or deceptive information.</li>
                                     <li>Misrepresents your identity, age, location, or relationship status.</li>
                                     <li>Uses fake or heavily edited photos that do not accurately represent you.</li>
@@ -205,7 +205,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     We encourage content that:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li><Text strong>Is Authentic:</Text> Genuinely represents who you are, your interests, and your intentions.</li>
                                     <li><Text strong>Is Respectful:</Text> Treats others with dignity, courtesy, and respect.</li>
                                     <li><Text strong>Is Appropriate:</Text> Adheres to community standards and is suitable for a dating platform.</li>
@@ -243,7 +243,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     As a user creating and sharing content on One Night Stand, you are responsible for:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li><Text strong>Accuracy:</Text> Ensuring all information you provide is truthful and accurate.</li>
                                     <li><Text strong>Legality:</Text> Ensuring your content complies with all applicable laws.</li>
                                     <li><Text strong>Permissions:</Text> Obtaining necessary permissions, licenses, and consents before posting content.</li>
@@ -266,7 +266,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     We use automated systems, including artificial intelligence and machine learning, to:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Scan uploaded content for prohibited material.</li>
                                     <li>Detect patterns of abusive behavior.</li>
                                     <li>Flag potentially violating content for human review.</li>
@@ -277,7 +277,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     Our human moderation team:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Reviews flagged content and user reports.</li>
                                     <li>Makes final decisions on content removal and account actions.</li>
                                     <li>Investigates complex or nuanced cases.</li>
@@ -305,7 +305,7 @@ export default function UserGeneratedContent() {
                                 </Paragraph>
 
                                 <Title level={4}>9.1. In-App Reporting</Title>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Tap the three-dot menu on any profile or message.</li>
                                     <li>Select "Report."</li>
                                     <li>Choose the reason for reporting.</li>
@@ -316,7 +316,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     For serious violations or if you prefer email:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li><Text strong>Safety Concerns:</Text> <a href="mailto:safety@one-night-stand.co" style={{ color: "#FF3A8A" }}>safety@one-night-stand.co</a></li>
                                     <li><Text strong>Copyright Issues:</Text> <a href="mailto:copyright@one-night-stand.co" style={{ color: "#FF3A8A" }}>copyright@one-night-stand.co</a></li>
                                     <li><Text strong>General Policy Violations:</Text> <a href="mailto:legal@one-night-stand.co" style={{ color: "#FF3A8A" }}>legal@one-night-stand.co</a></li>
@@ -326,7 +326,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     When you submit a report:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Your report is reviewed by our moderation team, typically within 24-48 hours.</li>
                                     <li>We may take immediate action for severe violations.</li>
                                     <li>You will receive confirmation that we received your report.</li>
@@ -341,7 +341,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     We reserve the right to remove any content, with or without notice, that:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Violates this UGC Policy, our Terms of Service, or other policies.</li>
                                     <li>Violates applicable laws or regulations.</li>
                                     <li>Is subject to a valid legal request (e.g., court order, subpoena, DMCA takedown).</li>
@@ -353,7 +353,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     You can delete your own content at any time through your account settings. Deleted content:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Is immediately removed from public view.</li>
                                     <li>May persist in backups for up to 90 days.</li>
                                     <li>May be retained longer if required by law or for safety/security purposes.</li>
@@ -387,7 +387,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     Temporary or permanent restrictions on certain features, such as:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Inability to upload new photos.</li>
                                     <li>Restrictions on messaging or other communication features.</li>
                                     <li>Limitations on profile visibility.</li>
@@ -402,7 +402,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     Permanent ban from the platform for:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Severe violations (e.g., CSAM, threats of violence).</li>
                                     <li>Repeated violations after warnings.</li>
                                     <li>Circumventing previous bans or restrictions.</li>
@@ -427,7 +427,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     You have control over the visibility of your content through:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li><Text strong>Profile Privacy Settings:</Text> Control who can see your profile and content.</li>
                                     <li><Text strong>Photo Visibility:</Text> Choose which photos are public or visible only to matches.</li>
                                     <li><Text strong>Location Sharing:</Text> Control precision and visibility of your location.</li>
@@ -436,7 +436,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     However, please note:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Once shared with another user, you cannot control what they do with it.</li>
                                     <li>Users may take screenshots or save content outside our platform.</li>
                                     <li>Deleted content may remain in backups or caches temporarily.</li>
@@ -447,7 +447,7 @@ export default function UserGeneratedContent() {
                             {/* Section 13: Intellectual Property */}
                             <div id="intellectual">
                                 <Title level={2}>13. Intellectual Property Rights</Title>
-                                
+
                                 <Title level={4}>13.1. Your Rights</Title>
                                 <Paragraph>
                                     You retain all ownership rights to your Content. The license you grant us (Section 4) is non-exclusive, meaning you can share your content elsewhere.
@@ -457,7 +457,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     You must ensure you have all necessary rights, licenses, and permissions before posting content that includes:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Other people's faces or likenesses.</li>
                                     <li>Copyrighted music, art, or media.</li>
                                     <li>Trademarked logos or brands.</li>
@@ -468,7 +468,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     We comply with the Digital Millennium Copyright Act (DMCA). If you believe your copyright has been infringed:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Submit a DMCA takedown notice to <a href="mailto:copyright@one-night-stand.co" style={{ color: "#FF3A8A" }}>copyright@one-night-stand.co</a>.</li>
                                     <li>Include all required elements per 17 U.S.C. § 512(c)(3).</li>
                                     <li>Provide specific identification of the infringing content.</li>
@@ -481,7 +481,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     By posting Content, you represent and warrant that:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>You are the sole author and owner of the Content, or have all necessary rights and permissions.</li>
                                     <li>The Content does not and will not infringe any third-party intellectual property rights.</li>
                                     <li>The Content does not violate any law, regulation, or third-party rights.</li>
@@ -499,7 +499,7 @@ export default function UserGeneratedContent() {
                                 <Paragraph>
                                     You agree to indemnify, defend, and hold harmless One Night Stand, Match Mate Group, Quantum Times Technologies, and their respective officers, directors, employees, agents, and affiliates from and against any claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from:
                                 </Paragraph>
-                                <ul>
+                                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Your violation of this UGC Policy.</li>
                                     <li>Your violation of any law or regulation.</li>
                                     <li>Your violation of any third-party rights, including intellectual property rights, privacy rights, or publicity rights.</li>
