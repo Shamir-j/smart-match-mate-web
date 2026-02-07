@@ -29,6 +29,7 @@ export default function Footer() {
                         <Link href="/legal/cookie-policy" style={{ color: '#1677ff', textDecoration: 'none' }}>Cookie Policy</Link>
                         <Link href="/legal/intellectual-property" style={{ color: '#1677ff', textDecoration: 'none' }}>Intellectual Property</Link>
                         <Link href="/legal/user-generated-content" style={{ color: '#1677ff', textDecoration: 'none' }}>User-Generated Content Policy</Link>
+                        <Link href="/legal/data-deletion-request" style={{ color: '#1677ff', textDecoration: 'none' }}>Data Deletion Request</Link>
                         <Link href="/legal/accessibility" style={{ color: '#1677ff', textDecoration: 'none' }}>Accessibility Statement</Link>
                     </Space>
                 </Col>
