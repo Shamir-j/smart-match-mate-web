@@ -23,7 +23,7 @@ export default function HeroSection() {
                         margin: "0 auto",
                     }}
                 >
-                    No drama. No commitments. Just vibes.
+                    Meet new people. Make real connections.
                 </Title>
 
                 <Paragraph
@@ -35,7 +35,7 @@ export default function HeroSection() {
                         marginInline: "auto",
                     }}
                 >
-                    Your go-to app for casual encounters. Swipe, match, and meet tonight.
+                    Connect with like-minded singles in your area. Swipe, match, and start conversations today.
                 </Paragraph>
 
                 <div
