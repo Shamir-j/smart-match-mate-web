@@ -50,3 +50,24 @@ We may modify these Terms at any time. Continued use constitutes acceptance of u
 
 ## 15. Contact
 **Email:** legal@one-night-stand.co
+
+
+
+
+
+
+
+
+
+
+
+
+
+Before:
+
+"No drama. No commitments. Just vibes."
+"Your go-to app for casual encounters. Swipe, match, and meet tonight."
+Now:
+
+"Meet new people. Make real connections."
+"Connect with like-minded singles in your area. Swipe, match, and start conversations today."
