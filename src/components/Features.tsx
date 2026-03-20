@@ -4,19 +4,19 @@ import Title from "antd/es/typography/Title";
 
 const features = [
     {
-        icon: "🕵️",
-        title: "Incognito Mode",
-        desc: "Browse profiles discreetly without being seen by others.",
+        icon: "📍",
+        title: "Local Discovery",
+        desc: "Find and connect with real people in your city or nearby.",
     },
     {
-        icon: "🔥",
-        title: "Hotspot Boosts",
-        desc: "Increase your visibility in popular areas to get more matches.",
+        icon: "🛡️",
+        title: "Safe Environment",
+        desc: "Built with privacy and safety tools to let you date with confidence.",
     },
     {
-        icon: "✅",
-        title: "Verified Users",
-        desc: "Connect with real people with verified profiles.",
+        icon: "💎",
+        title: "Smart Matching",
+        desc: "Customizable discovery settings to find exactly what you're looking for.",
     },
 ];
 

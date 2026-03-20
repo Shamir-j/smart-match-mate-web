@@ -35,7 +35,8 @@ export default function HeroSection() {
                         marginInline: "auto",
                     }}
                 >
-                    Connect with like-minded singles in your area. Swipe, match, and start conversations today.
+                    Connect with real people in your area for honest conversations and meaningful dating experiences. 
+                    Safe, authentic, and easy to use.
                 </Paragraph>
 
                 <div

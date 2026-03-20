@@ -31,9 +31,9 @@ export default function Header() {
 
   const menuItems = [
     { label: 'Home', key: '/', href: '/' },
-    { label: 'Safety', key: '/safety', href: '/terms-of-service#safety' },
-    { label: 'Privacy', key: '/privacy-notice', href: '/privacy-notice' },
-    { label: 'Terms', key: '/terms-of-service', href: '/terms-of-service' },
+    { label: 'Safety', key: '/safety', href: '/legal/child-safety' },
+    { label: 'Privacy', key: '/privacy-notice', href: '/legal/privacy-notice' },
+    { label: 'Terms', key: '/terms-of-service', href: '/legal/terms-of-service' },
   ];
 
   // Determine header styles based on state

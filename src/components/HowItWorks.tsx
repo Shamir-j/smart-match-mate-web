@@ -1,5 +1,5 @@
 import { Card, Col, Row } from "antd";
-import { HeartOutlined, MessageOutlined, SwapOutlined,} from "@ant-design/icons";
+import { HeartOutlined, MessageOutlined, SearchOutlined, UserAddOutlined } from "@ant-design/icons";
 import Title from "antd/es/typography/Title";
 import Paragraph from "antd/es/typography/Paragraph";
 
@@ -7,19 +7,24 @@ import Paragraph from "antd/es/typography/Paragraph";
 export default function HowItWorks() {
     const steps = [
         {
-            icon: <SwapOutlined style={{ fontSize: 32, color: "#FF3A8A" }} />,
-            title: "Swipe",
-            description: "Browse profiles and swipe right to like or left to pass.",
+            icon: <UserAddOutlined style={{ fontSize: 32, color: "#FF3A8A" }} />,
+            title: "Create Profile",
+            description: "Add photos and your interests to let others know the real you.",
         },
         {
-            icon: <HeartOutlined style={{ fontSize: 32, color: "#FF3A8A" }} />,
-            title: "Match",
-            description: "Get notified when someone likes you back. It's a match!",
+            icon: <SearchOutlined style={{ fontSize: 32, color: "#FF3A8A" }} />,
+            title: "Discover Matches",
+            description: "Browse profiles of real singles nearby and find your match.",
         },
         {
             icon: <MessageOutlined style={{ fontSize: 32, color: "#FF3A8A" }} />,
-            title: "Meet",
-            description: "Chat with your matches and arrange a meet-up.",
+            title: "Chat Safely",
+            description: "Start a conversation and get to know each other inside the app.",
+        },
+        {
+            icon: <HeartOutlined style={{ fontSize: 32, color: "#FF3A8A" }} />,
+            title: "Meet Responsibly",
+            description: "Take things offline when you're ready and meet safely.",
         },
     ];
 

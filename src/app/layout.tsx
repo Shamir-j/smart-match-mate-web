@@ -28,29 +28,17 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "One Night Stand – No Drama. No Commitments. Just Vibes.",
-  description: "One Night Stand is the hookup app for people who know what they want — tonight. Swipe, match, and meet in a safe and discreet space. No drama, no commitments, just vibes.",
+  title: "One Night Stand – Meet & Date With Real People",
+  description: "One Night Stand is a modern dating app for adults who want honest connections and meaningful conversations. Meet real people, chat safely, and explore dating near you.",
   keywords: [
-    "casual dating app",
-    "hookup app", 
-    "one night stand app",
-    "dating tonight",
-    "no-strings-attached dating",
-    "casual encounters",
-    "swipe match meet",
-    "discreet dating app",
-    "local hookups",
-    "casual dating near me",
-    "no commitments dating",
-    "fun dating app",
-    "quick hookups",
-    "safe hookup app",
-    "modern dating app",
-    "swipe to meet",
-    "casual meetup app",
-    "vibes only dating",
-    "adult dating app",
-    "fast casual dating",
+    "dating app",
+    "meet singles",
+    "local dating",
+    "adult dating",
+    "chat and meet",
+    "social dating",
+    "matchmaking app",
+    "dating near me",
   ],
   applicationName: "One Night Stand",
   authors: [{ name: "Zaam Technologies" }],
@@ -64,22 +52,22 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://one-night-stand.co",
-    title: "One Night Stand – No Drama. No Commitments. Just Vibes.",
-    description: "Swipe, match, and meet tonight. One Night Stand is the casual dating app built for hookups, not relationships.",
+    title: "One Night Stand – Meet & Date With Real People",
+    description: "Connect with real people nearby. One Night Stand is built for adults who want honest connections and safe, meaningful dating experiences.",
     siteName: "One Night Stand",
     images: [
       {
         url: "https://lumenpix.one-night-stand.co/zaam-technologies/image/upload/v1721149132/resources/Zaam_Technologies_Design_a_bold,_modern,_and_seductive_app_preview_card_for__One_Ni_9b661ef4-704b-470d-8739-23447f1f7b62.jpg",
         width: 1200,
         height: 630,
-        alt: "One Night Stand – Casual Hookup App",
+        alt: "One Night Stand – Meet & Date",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "One Night Stand – No Drama. No Commitments. Just Vibes.",
-    description: "The hookup app for people who know what they want — tonight. Safe, discreet, and easy.",
+    title: "One Night Stand – Meet & Date With Real People",
+    description: "The modern dating app for adults wanting honest connections. Safe, professional, and easy.",
     images: ["https://lumenpix.one-night-stand.co/zaam-technologies/image/upload/v1721149132/resources/Zaam_Technologies_Design_a_bold,_modern,_and_seductive_app_preview_card_for__One_Ni_9b661ef4-704b-470d-8739-23447f1f7b62.jpg"],
     creator: "@onenightstand",
   },
@@ -119,11 +107,48 @@ export const metadata: Metadata = {
 import Header from "../components/Header";
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "One Night Stand",
+    "url": "https://one-night-stand.co",
+    "logo": "https://one-night-stand.co/favicon.ico",
+    "description": "One Night Stand is a modern dating app for adults who want honest connections and meaningful conversations. Meet real people and explore dating near you.",
+    "sameAs": [
+      "https://twitter.com/onenightstand",
+      "https://instagram.com/onenightstand",
+      "https://facebook.com/onenightstand"
+    ]
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "One Night Stand",
+    "url": "https://one-night-stand.co",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://one-night-stand.co/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />

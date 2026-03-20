@@ -1,7 +1,6 @@
 import { Row, Col, Space } from "antd";
 import { InstagramOutlined, TwitterOutlined, YoutubeOutlined, FacebookOutlined, } from "@ant-design/icons";
 import Text from "antd/es/typography/Text";
-import AntLink from "antd/es/typography/Link";
 import Paragraph from "antd/es/typography/Paragraph";
 import Image from "next/image";
 import Link from "next/link";
@@ -38,29 +37,29 @@ export default function Footer() {
                 <Col xs={24} md={6}>
                     <h4 style={{ fontWeight: 600, marginBottom: 12 }}>Careers</h4>
                     <Space orientation="vertical">
-                        <AntLink href="#">Careers Portal</AntLink>
-                        <AntLink href="#">Tech Blog</AntLink>
+                        <Link href="#">Careers Portal</Link>
+                        <Link href="#">Tech Blog</Link>
                     </Space>
                 </Col>
 
                 <Col xs={24} md={6}>
                     <h4 style={{ fontWeight: 600, marginBottom: 12 }}>Social</h4>
                     <Space size="large">
-                        <AntLink href="#"><InstagramOutlined style={{ fontSize: 20 }} /></AntLink>
-                        <AntLink href="#"><TwitterOutlined style={{ fontSize: 20 }} /></AntLink>
-                        <AntLink href="#"><YoutubeOutlined style={{ fontSize: 20 }} /></AntLink>
-                        <AntLink href="#"><FacebookOutlined style={{ fontSize: 20 }} /></AntLink>
+                        <Link href="#"><InstagramOutlined style={{ fontSize: 20 }} /></Link>
+                        <Link href="#"><TwitterOutlined style={{ fontSize: 20 }} /></Link>
+                        <Link href="#"><YoutubeOutlined style={{ fontSize: 20 }} /></Link>
+                        <Link href="#"><FacebookOutlined style={{ fontSize: 20 }} /></Link>
                     </Space>
                 </Col>
 
                 <Col xs={24} md={6}>
                     <h4 style={{ fontWeight: 600, marginBottom: 12 }}>More</h4>
                     <Space orientation="vertical">
-                        <AntLink href="#">FAQ</AntLink>
-                        <AntLink href="#">Destinations</AntLink>
-                        <AntLink href="#">Press Room</AntLink>
-                        <AntLink href="#">Contact</AntLink>
-                        <AntLink href="#">Promo Code</AntLink>
+                        <Link href="#">FAQ</Link>
+                        <Link href="#">Destinations</Link>
+                        <Link href="#">Press Room</Link>
+                        <Link href="#">Contact</Link>
+                        <Link href="#">Promo Code</Link>
                     </Space>
                 </Col>
             </Row>
@@ -68,37 +67,41 @@ export default function Footer() {
             <hr style={{ margin: "2rem 0", borderTop: "1px solid #eee" }} />
 
             {/* App Store Badges */}
-            {/* App Store Badges */}
             <div style={{ textAlign: "center", marginBottom: "2rem" }}>
                 <Space size="large">
-                    <Image
-                        src="/appstore-badge.png"
-                        alt="Download on the App Store"
-                        width={120}
-                        height={40}
-                        style={{ height: 45, width: "auto" }}
-                    />
-                    <Image
-                        src="/googleplay-badge.png"
-                        alt="Get it on Google Play"
-                        width={120}
-                        height={40}
-                        style={{ height: 45, width: "auto" }}
-                    />
+                    <Link href="#">
+                        <Image
+                            src="/appstore-badge.png"
+                            alt="Download on the App Store"
+                            width={120}
+                            height={40}
+                            style={{ height: 45, width: "auto" }}
+                        />
+                    </Link>
+                    <Link href="https://play.google.com/store/apps/details?id=com.quantum.times.technologies.onenightstand" target="_blank">
+                        <Image
+                            src="/googleplay-badge.png"
+                            alt="Get it on Google Play"
+                            width={120}
+                            height={40}
+                            style={{ height: 45, width: "auto" }}
+                        />
+                    </Link>
                 </Space>
             </div>
 
 
             {/* Marketing Text */}
             <Paragraph style={{ maxWidth: 900, margin: "0 auto 2rem", textAlign: "center" }}>
-                Single people, listen up: If you’re looking for love, want to start dating,
-                or just keep it casual, you need to be here. With millions of matches made,
-                it’s the place to meet your next best match.
+                One Night Stand is a modern dating app for adults who want honest connections 
+                and meaningful conversations. Whether you’re looking to meet someone new, 
+                chat with local singles, or explore dating opportunities near you, 
+                One Night Stand helps you connect with real people in your area.
             </Paragraph>
             <Paragraph style={{ maxWidth: 900, margin: "0 auto 2rem", textAlign: "center" }}>
-                There really is something for everyone. Want to get into a relationship? You got it.
-                Trying to find new friends? Say no more. Everyone’s invited to make connections,
-                memories, and everything in between.
+                Designed for adults 18+, our platform focuses on authentic profiles, 
+                privacy, and safety, so you can date with confidence. 
+                Meet real singles, start conversations, and explore dating at your own pace.
             </Paragraph>
 
             <hr style={{ margin: "2rem 0", borderTop: "1px solid #eee" }} />
@@ -106,11 +109,11 @@ export default function Footer() {
             {/* Bottom links */}
             <div style={{ textAlign: "center", marginBottom: "1rem" }}>
                 <Space size="middle" wrap>
-                    <AntLink href="/faq">FAQ</AntLink>
-                    <AntLink href="/safety-tips">Safety Tips</AntLink>
-                    <Link href="/legal/terms-of-service"><AntLink>Terms of Service</AntLink></Link>
-                    <AntLink href="/legal/cookie-policy">Cookie Policy</AntLink>
-                    <Link href="/legal/privacy-notice"><AntLink>Privacy Settings</AntLink></Link>
+                    <Link href="/faq" className="ant-typography ant-typography-link">FAQ</Link>
+                    <Link href="/safety-tips" className="ant-typography ant-typography-link">Safety Tips</Link>
+                    <Link href="/legal/terms-of-service" className="ant-typography ant-typography-link">Terms of Service</Link>
+                    <Link href="/legal/cookie-policy" className="ant-typography ant-typography-link">Cookie Policy</Link>
+                    <Link href="/legal/privacy-notice" className="ant-typography ant-typography-link">Privacy Settings</Link>
                 </Space>
             </div>
 

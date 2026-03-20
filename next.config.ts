@@ -1,35 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig: import('next').NextConfig = {
+  output: 'export',
   reactStrictMode: true,
   images: {
-    unoptimized: false,
+    unoptimized: true,
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'via.placeholder.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'i.pravatar.cc',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'lumenpix.one-night-stand.co',
-        port: '',
-        pathname: '/**',
-      }
+/* ... */
     ],
   },
+  /* 
   async headers() {
     return [
       {
@@ -42,6 +21,7 @@ const nextConfig: import('next').NextConfig = {
       },
     ];
   },
+  */
 };
 
 module.exports = nextConfig;
