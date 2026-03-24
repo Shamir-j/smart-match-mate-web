@@ -3,20 +3,16 @@ Header set X-Frame-Options "DENY"
 Header set X-Content-Type-Options "nosniff"
 Header set Referrer-Policy "origin-when-cross-origin"
 
-# Enable URL rewriting
+# Simple Routing for Next.js with trailingSlash: true
+Options -MultiViews -Indexes
 RewriteEngine On
+RewriteBase /
 
-# Handle Next.js internal routing (prevent 404 on refresh)
-# If the requested file or directory doesn't exist, serve the same path but with .html extension if it exists
-# Or fall back to index.html for unknown routes (optional for pure static)
-
-# Remove .html from URLs (optional but cleaner)
+# Force trailing slash on directories (standard Apache behavior, but explicit here)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html [L]
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule ^(.*)$ $1/ [R=301,L]
 
-# For pages that are directories with index.html
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{REQUEST_FILENAME}/index.html -f
-RewriteRule ^(.*)$ $1/index.html [L]
+# Custom 404 page
+ErrorDocument 404 /404.html
