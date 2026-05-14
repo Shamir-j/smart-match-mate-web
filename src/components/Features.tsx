@@ -1,79 +1,47 @@
-import { Card, Col, Row } from "antd";
-import Paragraph from "antd/es/typography/Paragraph";
-import Title from "antd/es/typography/Title";
+import styles from './styles.module.css';
 
 const features = [
-    {
-        icon: "📍",
-        title: "Local Discovery",
-        desc: "Find and connect with real people in your city or nearby.",
-    },
-    {
-        icon: "🛡️",
-        title: "Safe Environment",
-        desc: "Built with privacy and safety tools to let you date with confidence.",
-    },
-    {
-        icon: "💎",
-        title: "Smart Matching",
-        desc: "Customizable discovery settings to find exactly what you're looking for.",
-    },
+  {
+    icon: "📍",
+    title: "Local Discovery",
+    desc: "Find and connect with real people in your city or nearby.",
+  },
+  {
+    icon: "🛡️",
+    title: "Safe Environment",
+    desc: "Built with privacy and safety tools to let you date with confidence.",
+  },
+  {
+    icon: "💎",
+    title: "Smart Matching",
+    desc: "Customizable discovery settings to find exactly what you're looking for.",
+  },
 ];
 
 export default function Features() {
-    return (
-        <div
-            style={{
-                background: "linear-gradient(to bottom, #000000, #1a1a1a)",
-                color: "white",
-                padding: "4rem 1rem",
-                textAlign: "center",
-            }}
-            id="features"
-        >
-            <Title level={2} style={{ color: "white", marginBottom: "2rem" }}>
-                Features
-            </Title>
+  return (
+    <section className={styles.sectionGradientDark} id="features">
+      <div className={styles.container}>
+        <h2 className={styles.sectionTitle}>
+          Features
+        </h2>
 
-            <Row gutter={[24, 24]} justify="center">
-                {features.map((feature, index) => (
-                    <Col xs={24} md={8} key={index}>
-                        <Card
-                            variant="borderless"
-                            style={{
-                                background: "#121212",
-                                color: "white",
-                                borderRadius: "12px",
-                                textAlign: "center",
-                                padding: "2rem",
-                                height: "100%",
-                            }}
-                        >
-                            <div style={{ fontSize: "2rem", marginBottom: "1rem" }}>
-                                {feature.icon}
-                            </div>
-                            <Title
-                                level={3}
-                                style={{
-                                    color: "white",
-                                    fontWeight: "bold",
-                                    marginBottom: "0.5rem",
-                                }}
-                            >
-                                {feature.title}
-                            </Title>
-                            <Paragraph
-                                style={{
-                                    color: "rgba(255,255,255,0.7)",
-                                    fontSize: "1rem",
-                                }}
-                            >
-                                {feature.desc}
-                            </Paragraph>
-                        </Card>
-                    </Col>
-                ))}
-            </Row>
+        <div className={styles.grid}>
+          {features.map((feature, index) => (
+            <div key={index} className={styles.card}>
+              <div className={styles.cardIcon}>
+                {feature.icon}
+              </div>
+              <h3 className={styles.cardTitle}>
+                {feature.title}
+              </h3>
+              <p className={styles.cardText}>
+                {feature.desc}
+              </p>
+            </div>
+          ))}
         </div>
-    );
+      </div>
+    </section>
+  );
 }

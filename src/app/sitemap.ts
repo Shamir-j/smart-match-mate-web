@@ -7,24 +7,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   // List of paths for the sitemap
   const paths = [
-    '',
-    '/faq',
-    '/safety-tips',
-    '/legal/privacy-notice',
-    '/legal/terms-of-service',
-    '/legal/cookie-policy',
-    '/legal/consumer-health-privacy',
-    '/legal/intellectual-property',
-    '/legal/user-generated-content',
-    '/legal/child-safety',
-    '/legal/data-deletion-request',
-    '/legal/accessibility',
+    { path: '', priority: 1.0 },
+    // { path: '/faq', priority: 0.8 },
+    // { path: '/safety-tips', priority: 0.8 },
+    { path: '/legal/privacy-notice', priority: 0.2 },
+    { path: '/legal/terms-of-service', priority: 0.2 },
+    { path: '/legal/cookie-policy', priority: 0.2 },
+    { path: '/legal/consumer-health-privacy', priority: 0.2 },
+    { path: '/legal/intellectual-property', priority: 0.2 },
+    { path: '/legal/user-generated-content', priority: 0.2 },
+    { path: '/legal/child-safety', priority: 0.2 },
+    { path: '/legal/data-deletion-request', priority: 0.2 },
+    { path: '/legal/accessibility', priority: 0.2 },
   ];
 
-  return paths.map((path) => ({
-    url: `${baseUrl}${path}`,
+  return paths.map((item) => ({
+    url: `${baseUrl}${item.path}`,
     lastModified: new Date(),
     changeFrequency: 'monthly',
-    priority: path === '' ? 1 : 0.8,
+    priority: item.priority,
   }));
 }

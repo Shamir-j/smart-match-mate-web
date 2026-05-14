@@ -28,7 +28,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "One Night Stand – Meet & Date With Real People",
+  title: {
+    default: "One Night Stand – Meet & Date With Real People",
+    template: "%s | One Night Stand",
+  },
   description: "One Night Stand is a modern dating app for adults who want honest connections and meaningful conversations. Meet real people, chat safely, and explore dating near you.",
   keywords: [
     "dating app",
@@ -44,6 +47,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Zaam Technologies" }],
   creator: "Zaam Technologies", 
   publisher: "Zaam Technologies",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   metadataBase: new URL("https://one-night-stand.co"),
   category: "dating",
   alternates: {
@@ -55,6 +63,7 @@ export const metadata: Metadata = {
     title: "One Night Stand – Meet & Date With Real People",
     description: "Connect with real people nearby. One Night Stand is built for adults who want honest connections and safe, meaningful dating experiences.",
     siteName: "One Night Stand",
+    locale: "en_US",
     images: [
       {
         url: "https://lumenpix.one-night-stand.co/zaam-technologies/image/upload/v1721149132/resources/Zaam_Technologies_Design_a_bold,_modern,_and_seductive_app_preview_card_for__One_Ni_9b661ef4-704b-470d-8739-23447f1f7b62.jpg",
@@ -136,6 +145,19 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     }
   };
 
+  const softwareAppJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "One Night Stand",
+    "operatingSystem": "ANDROID, IOS",
+    "applicationCategory": "SocialNetworkingApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  };
+
   return (
     <html lang="en">
       <head>
@@ -148,6 +170,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd) }}
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

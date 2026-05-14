@@ -1,126 +1,119 @@
-import { Row, Col, Space } from "antd";
-import { InstagramOutlined, TwitterOutlined, YoutubeOutlined, FacebookOutlined, } from "@ant-design/icons";
-import Text from "antd/es/typography/Text";
-import Paragraph from "antd/es/typography/Paragraph";
 import Image from "next/image";
 import Link from "next/link";
+import styles from './styles.module.css';
 
 export default function Footer() {
-    const year = new Date().getFullYear();
+  const year = new Date().getFullYear();
 
-    return (
-        <footer
-            style={{
-                background: "#fff",
-                color: "#333",
-                padding: "3rem 2rem",
-                fontSize: "14px",
-            }}
-        >
-            {/* Top section: Legal / Careers / Social / FAQ */}
-            <Row gutter={[32, 24]} justify="space-between">
-                <Col xs={24} md={6}>
-                    <h4 style={{ fontWeight: 600, marginBottom: 12 }}>Legal</h4>
-                    <Space orientation="vertical">
-                        <Link href="/legal/privacy-notice" style={{ color: '#1677ff', textDecoration: 'none' }}>Privacy Notice</Link>
-                        <Link href="/legal/consumer-health-privacy" style={{ color: '#1677ff', textDecoration: 'none' }}>Consumer Health Data Privacy Policy</Link>
-                        <Link href="/legal/terms-of-service" style={{ color: '#1677ff', textDecoration: 'none' }}>Terms of Service</Link>
-                        <Link href="/legal/cookie-policy" style={{ color: '#1677ff', textDecoration: 'none' }}>Cookie Policy</Link>
-                        <Link href="/legal/intellectual-property" style={{ color: '#1677ff', textDecoration: 'none' }}>Intellectual Property</Link>
-                        <Link href="/legal/user-generated-content" style={{ color: '#1677ff', textDecoration: 'none' }}>User-Generated Content Policy</Link>
-                        <Link href="/legal/child-safety" style={{ color: '#1677ff', textDecoration: 'none' }}>Child Safety Policy</Link>
-                        <Link href="/legal/data-deletion-request" style={{ color: '#1677ff', textDecoration: 'none' }}>Data Deletion Request</Link>
-                        <Link href="/legal/accessibility" style={{ color: '#1677ff', textDecoration: 'none' }}>Accessibility Statement</Link>
-                    </Space>
-                </Col>
+  return (
+    <footer className={styles.footer}>
+      {/* Top section: Legal / Careers / Social / FAQ */}
+      <div className={styles.footerGrid}>
+        <div>
+          <h4 className={styles.footerTitle}>Legal</h4>
+          <div className={styles.footerLinks}>
+            <Link href="/legal/privacy-notice" className={styles.footerLink}>Privacy Notice</Link>
+            <Link href="/legal/consumer-health-privacy" className={styles.footerLink}>Consumer Health Data Privacy Policy</Link>
+            <Link href="/legal/terms-of-service" className={styles.footerLink}>Terms of Service</Link>
+            <Link href="/legal/cookie-policy" className={styles.footerLink}>Cookie Policy</Link>
+            <Link href="/legal/intellectual-property" className={styles.footerLink}>Intellectual Property</Link>
+            <Link href="/legal/user-generated-content" className={styles.footerLink}>User-Generated Content Policy</Link>
+            <Link href="/legal/child-safety" className={styles.footerLink}>Child Safety Policy</Link>
+            <Link href="/legal/data-deletion-request" className={styles.footerLink}>Data Deletion Request</Link>
+            <Link href="/legal/accessibility" className={styles.footerLink}>Accessibility Statement</Link>
+          </div>
+        </div>
 
-                <Col xs={24} md={6}>
-                    <h4 style={{ fontWeight: 600, marginBottom: 12 }}>Careers</h4>
-                    <Space orientation="vertical">
-                        <Link href="#">Careers Portal</Link>
-                        <Link href="#">Tech Blog</Link>
-                    </Space>
-                </Col>
+        <div>
+          <h4 className={styles.footerTitle}>Careers</h4>
+          <div className={styles.footerLinks}>
+            <Link href="#" className={styles.footerDarkLink}>Careers Portal</Link>
+            <Link href="#" className={styles.footerDarkLink}>Tech Blog</Link>
+          </div>
+        </div>
 
-                <Col xs={24} md={6}>
-                    <h4 style={{ fontWeight: 600, marginBottom: 12 }}>Social</h4>
-                    <Space size="large">
-                        <Link href="#"><InstagramOutlined style={{ fontSize: 20 }} /></Link>
-                        <Link href="#"><TwitterOutlined style={{ fontSize: 20 }} /></Link>
-                        <Link href="#"><YoutubeOutlined style={{ fontSize: 20 }} /></Link>
-                        <Link href="#"><FacebookOutlined style={{ fontSize: 20 }} /></Link>
-                    </Space>
-                </Col>
+        <div>
+          <h4 className={styles.footerTitle}>Social</h4>
+          <div className={styles.footerSocial}>
+            <Link href="#" className={styles.footerDarkLink}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </Link>
+            <Link href="#" className={styles.footerDarkLink}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </Link>
+            <Link href="#" className={styles.footerDarkLink}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+            </Link>
+            <Link href="#" className={styles.footerDarkLink}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </Link>
+          </div>
+        </div>
 
-                <Col xs={24} md={6}>
-                    <h4 style={{ fontWeight: 600, marginBottom: 12 }}>More</h4>
-                    <Space orientation="vertical">
-                        <Link href="#">FAQ</Link>
-                        <Link href="#">Destinations</Link>
-                        <Link href="#">Press Room</Link>
-                        <Link href="#">Contact</Link>
-                        <Link href="#">Promo Code</Link>
-                    </Space>
-                </Col>
-            </Row>
+        <div>
+          <h4 className={styles.footerTitle}>More</h4>
+          <div className={styles.footerLinks}>
+            {/* <Link href="#" className={styles.footerDarkLink}>FAQ</Link> */}
+            <Link href="#" className={styles.footerDarkLink}>Destinations</Link>
+            <Link href="#" className={styles.footerDarkLink}>Press Room</Link>
+            <Link href="#" className={styles.footerDarkLink}>Contact</Link>
+            <Link href="#" className={styles.footerDarkLink}>Promo Code</Link>
+          </div>
+        </div>
+      </div>
 
-            <hr style={{ margin: "2rem 0", borderTop: "1px solid #eee" }} />
+      <hr className={styles.footerDivider} />
 
-            {/* App Store Badges */}
-            <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-                <Space size="large">
-                    <Link href="#">
-                        <Image
-                            src="/appstore-badge.png"
-                            alt="Download on the App Store"
-                            width={120}
-                            height={40}
-                            style={{ height: 45, width: "auto" }}
-                        />
-                    </Link>
-                    <Link href="https://play.google.com/store/apps/details?id=com.quantum.times.technologies.onenightstand" target="_blank">
-                        <Image
-                            src="/googleplay-badge.png"
-                            alt="Get it on Google Play"
-                            width={120}
-                            height={40}
-                            style={{ height: 45, width: "auto" }}
-                        />
-                    </Link>
-                </Space>
-            </div>
+      {/* App Store Badges */}
+      <div className={styles.footerBadges}>
+        <Link href="#">
+          <Image
+            src="/appstore-badge.png"
+            alt="Download on the App Store"
+            width={120}
+            height={40}
+            style={{ height: 45, width: "auto" }}
+          />
+        </Link>
+        <Link href="https://play.google.com/store/apps/details?id=com.quantum.times.technologies.onenightstand" target="_blank">
+          <Image
+            src="/googleplay-badge.png"
+            alt="Get it on Google Play"
+            width={120}
+            height={40}
+            style={{ height: 45, width: "auto" }}
+          />
+        </Link>
+      </div>
 
+      {/* Marketing Text */}
+      <p className={styles.footerText}>
+        One Night Stand is a modern dating app for adults who want honest connections 
+        and meaningful conversations. Whether you’re looking to meet someone new, 
+        chat with local singles, or explore dating opportunities near you, 
+        One Night Stand helps you connect with real people in your area.
+      </p>
+      <p className={styles.footerText}>
+        Designed for adults 18+, our platform focuses on authentic profiles, 
+        privacy, and safety, so you can date with confidence. 
+        Meet real singles, start conversations, and explore dating at your own pace.
+      </p>
 
-            {/* Marketing Text */}
-            <Paragraph style={{ maxWidth: 900, margin: "0 auto 2rem", textAlign: "center" }}>
-                One Night Stand is a modern dating app for adults who want honest connections 
-                and meaningful conversations. Whether you’re looking to meet someone new, 
-                chat with local singles, or explore dating opportunities near you, 
-                One Night Stand helps you connect with real people in your area.
-            </Paragraph>
-            <Paragraph style={{ maxWidth: 900, margin: "0 auto 2rem", textAlign: "center" }}>
-                Designed for adults 18+, our platform focuses on authentic profiles, 
-                privacy, and safety, so you can date with confidence. 
-                Meet real singles, start conversations, and explore dating at your own pace.
-            </Paragraph>
+      <hr className={styles.footerDivider} />
 
-            <hr style={{ margin: "2rem 0", borderTop: "1px solid #eee" }} />
+      {/* Bottom links */}
+      <div className={styles.footerBottomLinks}>
+        {/* <Link href="/faq" className={styles.footerLink}>FAQ</Link> */}
+        {/* <Link href="/safety-tips" className={styles.footerLink}>Safety Tips</Link> */}
+        <Link href="/legal/terms-of-service" className={styles.footerLink}>Terms of Service</Link>
+        <Link href="/legal/cookie-policy" className={styles.footerLink}>Cookie Policy</Link>
+        <Link href="/legal/privacy-notice" className={styles.footerLink}>Privacy Settings</Link>
+      </div>
 
-            {/* Bottom links */}
-            <div style={{ textAlign: "center", marginBottom: "1rem" }}>
-                <Space size="middle" wrap>
-                    <Link href="/faq" className="ant-typography ant-typography-link">FAQ</Link>
-                    <Link href="/safety-tips" className="ant-typography ant-typography-link">Safety Tips</Link>
-                    <Link href="/legal/terms-of-service" className="ant-typography ant-typography-link">Terms of Service</Link>
-                    <Link href="/legal/cookie-policy" className="ant-typography ant-typography-link">Cookie Policy</Link>
-                    <Link href="/legal/privacy-notice" className="ant-typography ant-typography-link">Privacy Settings</Link>
-                </Space>
-            </div>
-
-            {/* Copyright */}
-            <Text type="secondary" style={{ display: "block", textAlign: "center" }}>
-                © {year} One Night Stand, All Rights Reserved.
-            </Text>
-        </footer>
-    );
+      {/* Copyright */}
+      <div className={styles.footerCopyright}>
+        © {year} One Night Stand, All Rights Reserved.
+      </div>
+    </footer>
+  );
 }
