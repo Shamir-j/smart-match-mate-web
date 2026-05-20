@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.quantum.times.technologies.onenightstand",
+      "sha256_cert_fingerprints": [
+        "65:7A:D1:64:4A:E6:95:C5:2B:51:CB:DF:61:F1:24:8E:17:0A:F6:04:69:A0:FA:6C:3E:29:4E:B9:80:E8:CA:EE"
+      ]
+    }
+  }
+]

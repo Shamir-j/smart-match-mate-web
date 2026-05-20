@@ -19,8 +19,9 @@ Implement legally compliant, user-friendly Privacy Policy and Terms of Use pages
 
 ## 3. Functional Requirements
 ### 3.1 Routes
-- /privacy
-- /terms
+- /legal/privacy-notice
+- /legal/terms-of-service
+
 
 ### 3.2 Rendering
 - Markdown-based rendering

@@ -29,10 +29,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "One Night Stand – Meet & Date With Real People",
+    default: "One Night Stand – Casual Dating App & Local Chat",
     template: "%s | One Night Stand",
   },
-  description: "One Night Stand is a modern dating app for adults who want honest connections and meaningful conversations. Meet real people, chat safely, and explore dating near you.",
+  description: "One Night Stand is a modern casual dating app for adults wanting honest connections, safe chats, and local dates. Download today to meet real singles nearby.",
+
   keywords: [
     "dating app",
     "meet singles",
@@ -60,8 +61,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://one-night-stand.co",
-    title: "One Night Stand – Meet & Date With Real People",
-    description: "Connect with real people nearby. One Night Stand is built for adults who want honest connections and safe, meaningful dating experiences.",
+    title: "One Night Stand – Casual Dating App & Local Chat",
+    description: "Connect with real people nearby. One Night Stand is the modern casual dating app for adults wanting honest connections, safe chats, and local dates.",
     siteName: "One Night Stand",
     locale: "en_US",
     images: [
@@ -69,14 +70,15 @@ export const metadata: Metadata = {
         url: "https://lumenpix.one-night-stand.co/zaam-technologies/image/upload/v1721149132/resources/Zaam_Technologies_Design_a_bold,_modern,_and_seductive_app_preview_card_for__One_Ni_9b661ef4-704b-470d-8739-23447f1f7b62.jpg",
         width: 1200,
         height: 630,
-        alt: "One Night Stand – Meet & Date",
+        alt: "One Night Stand – Casual Dating",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "One Night Stand – Meet & Date With Real People",
-    description: "The modern dating app for adults wanting honest connections. Safe, professional, and easy.",
+    title: "One Night Stand – Casual Dating App & Local Chat",
+    description: "The modern casual dating app for adults wanting honest connections, safe chats, and local dates.",
+
     images: ["https://lumenpix.one-night-stand.co/zaam-technologies/image/upload/v1721149132/resources/Zaam_Technologies_Design_a_bold,_modern,_and_seductive_app_preview_card_for__One_Ni_9b661ef4-704b-470d-8739-23447f1f7b62.jpg"],
     creator: "@onenightstand",
   },
