@@ -11,7 +11,8 @@ const sortedCities = [...cities]
 
 console.log('Filtered and sorted cities:', sortedCities.length);
 
-const topCities = sortedCities; // Process all cities (no limit!)
+const targetCount = 2000;
+const topCities = sortedCities.slice(0, targetCount);
 
 const slugCounts = {};
 const finalCitiesList = [];

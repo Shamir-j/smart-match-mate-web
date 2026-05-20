@@ -4,8 +4,8 @@ import Footer from "../../components/Footer";
 import styles from "../../components/styles.module.css";
 
 
-// Tell Next.js to dynamically render other visited cities
-export const dynamicParams = true;
+// Tell Next.js to only prerender paths returned from generateStaticParams
+export const dynamicParams = false;
 
 import citiesData from "../../constants/cities.json";
 
@@ -57,10 +57,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Generate static routes at build time (pre-render top 250 cities for ultra-fast builds)
+// Generate static routes at build time
 export async function generateStaticParams() {
-  return citiesData.slice(0, 250).map((city) => ({
-    city: `singles-in-${city.slug}`,
+  return Object.keys(CITIES).map((city) => ({
+    city: `singles-in-${city}`,
   }));
 }
 
