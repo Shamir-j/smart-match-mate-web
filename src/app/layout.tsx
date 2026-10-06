@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   ],
   applicationName: "One Night Stand",
   authors: [{ name: "Zaam Technologies" }],
-  creator: "Zaam Technologies", 
+  creator: "Zaam Technologies",
   publisher: "Zaam Technologies",
   formatDetection: {
     email: false,
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     description: "The modern casual dating app for adults wanting honest connections, safe chats, and local dates.",
 
     images: ["https://lumenpix.one-night-stand.co/zaam-technologies/image/upload/v1721149132/resources/Zaam_Technologies_Design_a_bold,_modern,_and_seductive_app_preview_card_for__One_Ni_9b661ef4-704b-470d-8739-23447f1f7b62.jpg"],
-    creator: "@onenightstand",
+    creator: "@noir",
   },
   icons: {
     icon: [
@@ -109,7 +109,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       "max-snippet": -1,
-      "max-image-preview": "large", 
+      "max-image-preview": "large",
       "max-video-preview": -1,
     },
   },
@@ -121,14 +121,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "One Night Stand",
-    "url": "https://one-night-stand.co",
-    "logo": "https://one-night-stand.co/favicon.ico",
+    "name": "One Night Stand: Meet & Date",
     "description": "One Night Stand is a modern dating app for adults who want honest connections and meaningful conversations. Meet real people and explore dating near you.",
     "sameAs": [
-      "https://twitter.com/onenightstand",
-      "https://instagram.com/onenightstand",
-      "https://facebook.com/onenightstand"
+      "https://twitter.com/noirapp",
+      "https://instagram.com/noirapp",
+      "https://facebook.com/noirapp"
     ]
   };
 

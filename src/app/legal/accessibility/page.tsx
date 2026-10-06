@@ -97,7 +97,7 @@ export default function Accessibility() {
                                     We welcome your feedback on the accessibility of One Night Stand. Please let us know if you encounter accessibility barriers on our site:
                                 </Paragraph>
                                 <Paragraph>
-                                    <Text strong>Email:</Text> <a href="mailto:accessibility@one-night-stand.co" style={{ color: "#FF3A8A" }}>accessibility@one-night-stand.co</a>
+                                    <Text strong>Email:</Text> <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>contact@quantumtimes.co.ke</a>
                                 </Paragraph>
                                 <Paragraph>
                                     We try to respond to feedback within 2 business days.

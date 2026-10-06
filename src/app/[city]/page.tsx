@@ -24,24 +24,24 @@ type Props = {
 async function getCityData(params: Promise<{ city: string }> | { city: string }) {
   const resolvedParams = params instanceof Promise ? await params : params;
   const rawCity = resolvedParams?.city || "singles-in-nairobi";
-  
+
   // Extract city name from "singles-in-city" prefix
-  const cityKey = rawCity.startsWith("singles-in-") 
-    ? rawCity.replace("singles-in-", "") 
+  const cityKey = rawCity.startsWith("singles-in-")
+    ? rawCity.replace("singles-in-", "")
     : rawCity;
-    
-  const cityData = CITIES[cityKey] || { 
-    name: cityKey.charAt(0).toUpperCase() + cityKey.slice(1).replace("-", " "), 
-    country: "" 
+
+  const cityData = CITIES[cityKey] || {
+    name: cityKey.charAt(0).toUpperCase() + cityKey.slice(1).replace("-", " "),
+    country: ""
   };
-  
+
   return { city: rawCity, cityName: cityData.name };
 }
 
 // Generate city-specific metadata programmatically
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { city, cityName } = await getCityData(params);
-  
+
   return {
     title: `Meet Singles in ${cityName} – Casual Dating & Chat`,
     description: `Connect with like-minded singles in ${cityName} today. One Night Stand is the best casual dating app for adults wanting honest conversations, safe chats, and exciting local dates in ${cityName}.`,
@@ -64,7 +64,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function CityLandingPage({ params }: Props) {
+export default async function CityLandingPage({ params }: Readonly<Props>) {
   const { city, cityName } = await getCityData(params);
 
   return (
@@ -84,7 +84,7 @@ export default async function CityLandingPage({ params }: Props) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className={styles.defaultBtn} aria-label={`Download App in ${cityName}`}>
+              <button type="button" className={styles.defaultBtn} aria-label={`Download App in ${cityName}`}>
                 Download App in {cityName}
               </button>
             </a>
@@ -132,7 +132,7 @@ export default async function CityLandingPage({ params }: Props) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className={styles.primaryBtn} style={{ padding: '1rem 2.5rem', fontSize: '1.125rem' }}>
+              <button type="button" className={styles.primaryBtn} style={{ padding: '1rem 2.5rem', fontSize: '1.125rem' }}>
                 Join Singles in {cityName}
               </button>
             </a>

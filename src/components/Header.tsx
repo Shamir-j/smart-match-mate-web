@@ -34,13 +34,13 @@ export default function Header() {
     { label: 'Terms', key: '/terms-of-service', href: '/legal/terms-of-service' },
   ];
 
-  const isTransparent = isHomePage && !scrolled;
-  const headerClass = isTransparent ? `${styles.header} ${styles.headerTransparent}` : `${styles.header} ${styles.headerSolid}`;
-  const textColor = isTransparent ? 'white' : '#333'; // Make text white on home top to match Hero, wait Hero text is white but original header bg was transparent and text was #333? Original said textColor = '#333' always. So we keep it or adapt. Original code had `const textColor = '#333';` directly.
+  const headerClass = scrolled
+    ? `${styles.header} ${styles.headerSolid}`
+    : styles.header;
 
   return (
     <>
-      <header className={headerClass}>
+      <header className={headerClass} style={{ background: 'rgba(255, 255, 255, 0.98)', borderBottom: '1px solid rgba(0, 0, 0, 0.06)' }}>
         <div style={{ zIndex: 1001 }}>
           <Link href="/" className={styles.logoText}>
             One Night Stand
@@ -53,20 +53,20 @@ export default function Header() {
               key={item.key}
               href={item.href}
               className={styles.navLink}
-              style={{ color: '#333' }}
+              style={{ color: '#1f2937' }}
             >
               {item.label}
             </Link>
           ))}
           <a href="https://play.google.com/store/apps/details?id=com.quantum.times.technologies.onenightstand&hl=en" target="_blank" rel="noreferrer">
-            <button className={styles.primaryBtn}>
+            <button type="button" className={styles.primaryBtn}>
               Download
             </button>
           </a>
         </nav>
 
-        <button className={styles.mobileMenuBtn} onClick={toggleDrawer}>
-          <Menu size={28} color="#333" />
+        <button type="button" className={styles.mobileMenuBtn} onClick={toggleDrawer} aria-label="Toggle Navigation Menu">
+          <Menu size={28} color="#1f2937" />
         </button>
       </header>
 
@@ -75,7 +75,7 @@ export default function Header() {
       <div className={`${styles.drawer} ${visible ? styles.drawerOpen : ''}`}>
         <div className={styles.drawerHeader}>
           <span className={styles.drawerTitle}>One Night Stand</span>
-          <button className={styles.drawerCloseBtn} onClick={closeDrawer}>
+          <button type="button" className={styles.drawerCloseBtn} onClick={closeDrawer} aria-label="Close Navigation Menu">
             <X size={24} />
           </button>
         </div>
@@ -91,7 +91,7 @@ export default function Header() {
             </Link>
           ))}
           <a href="https://play.google.com/store/apps/details?id=com.quantum.times.technologies.onenightstand&hl=en" target="_blank" rel="noreferrer" style={{ marginTop: '16px' }}>
-            <button className={styles.primaryBtn} style={{ width: '100%' }}>
+            <button type="button" className={styles.primaryBtn} style={{ width: '100%' }}>
               Download App
             </button>
           </a>

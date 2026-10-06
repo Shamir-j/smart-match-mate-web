@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Child Safety Policy | One Night Stand",
-  description: "Our zero-tolerance Child Safety Policy. Learn about our strict measures to protect minors and keep the platform safe on One Night Stand.",
+  title: "Child Safety Standards & CSAE Policy | One Night Stand: Meet & Date | Quantum Times Technologies",
+  description: "Official Child Safety Standards and Child Sexual Abuse and Exploitation (CSAE) Prohibition Policy for One Night Stand: Meet & Date, published by Quantum Times Technologies.",
   alternates: {
-    canonical: "https://one-night-stand.co/legal/child-safety/",
+    canonical: "/legal/child-safety/",
   },
 };
 
 export default function ChildSafetyLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return <>{children}</>;
 }

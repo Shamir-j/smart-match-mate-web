@@ -127,8 +127,8 @@ export default function DataDeletionRequest() {
                                         <div>
                                             <MailOutlined style={{ color: "#52c41a", fontSize: 20, marginRight: 8 }} />
                                             <Text strong style={{ fontSize: 16 }}>
-                                                <a href="mailto:privacy@one-night-stand.co" style={{ color: "#FF3A8A" }}>
-                                                    privacy@one-night-stand.co
+                                                <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>
+                                                    contact@quantumtimes.co.ke
                                                 </a>
                                             </Text>
                                         </div>
@@ -309,14 +309,14 @@ export default function DataDeletionRequest() {
                                     <Space orientation="vertical" size="small">
                                         <div>
                                             <Text strong>Email:</Text>{" "}
-                                            <a href="mailto:privacy@one-night-stand.co" style={{ color: "#FF3A8A" }}>
-                                                privacy@one-night-stand.co
+                                            <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>
+                                                contact@quantumtimes.co.ke
                                             </a>
                                         </div>
                                         <div>
                                             <Text strong>Support Email:</Text>{" "}
-                                            <a href="mailto:support@one-night-stand.co" style={{ color: "#FF3A8A" }}>
-                                                support@one-night-stand.co
+                                            <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>
+                                                contact@quantumtimes.co.ke
                                             </a>
                                         </div>
                                         <div>

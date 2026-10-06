@@ -94,7 +94,7 @@ export default function CookiePolicy() {
                 <Paragraph>
                   We use cookies to:
                 </Paragraph>
-               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
+                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                   <li>Authenticate you and keep you logged in.</li>
                   <li>Remember your preferences and settings.</li>
                   <li>Analyze how you use our services to improve them.</li>
@@ -105,10 +105,10 @@ export default function CookiePolicy() {
               {/* Section 3 */}
               <div id="types">
                 <Title level={2}>3. Types of Cookies We Use</Title>
-                <Table 
-                  columns={cookieColumns} 
-                  dataSource={cookieData} 
-                  pagination={false} 
+                <Table
+                  columns={cookieColumns}
+                  dataSource={cookieData}
+                  pagination={false}
                   bordered
                   size="middle"
                 />
@@ -132,7 +132,7 @@ export default function CookiePolicy() {
                   If you have questions about this Cookie Policy, please contact us at:
                 </Paragraph>
                 <Paragraph>
-                  <Text strong>Email:</Text> <a href="mailto:privacy@one-night-stand.co" style={{ color: "#FF3A8A" }}>privacy@one-night-stand.co</a>
+                  <Text strong>Email:</Text> <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>contact@quantumtimes.co.ke</a>
                 </Paragraph>
               </div>
             </Space>

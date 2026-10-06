@@ -8,7 +8,7 @@ export default function HeroSection() {
       </h1>
 
       <p className={styles.heroSubtitle}>
-        Connect with real people in your area for honest conversations and meaningful dating experiences. 
+        Connect with real people in your area for honest conversations and meaningful dating experiences.
         Safe, authentic, and easy to use.
       </p>
 
@@ -19,6 +19,7 @@ export default function HeroSection() {
           rel="noopener noreferrer"
         >
           <button
+            type='button'
             className={styles.defaultBtn}
             aria-label="Download app from Play Store"
           >

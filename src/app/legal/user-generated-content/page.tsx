@@ -317,9 +317,9 @@ export default function UserGeneratedContent() {
                                     For serious violations or if you prefer email:
                                 </Paragraph>
                                 <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
-                                    <li><Text strong>Safety Concerns:</Text> <a href="mailto:safety@one-night-stand.co" style={{ color: "#FF3A8A" }}>safety@one-night-stand.co</a></li>
-                                    <li><Text strong>Copyright Issues:</Text> <a href="mailto:copyright@one-night-stand.co" style={{ color: "#FF3A8A" }}>copyright@one-night-stand.co</a></li>
-                                    <li><Text strong>General Policy Violations:</Text> <a href="mailto:legal@one-night-stand.co" style={{ color: "#FF3A8A" }}>legal@one-night-stand.co</a></li>
+                                    <li><Text strong>Safety Concerns:</Text> <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>contact@quantumtimes.co.ke</a></li>
+                                    <li><Text strong>Copyright Issues:</Text> <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>contact@quantumtimes.co.ke</a></li>
+                                    <li><Text strong>General Policy Violations:</Text> <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>contact@quantumtimes.co.ke</a></li>
                                 </ul>
 
                                 <Title level={4}>9.3. What Happens After You Report</Title>
@@ -362,7 +362,7 @@ export default function UserGeneratedContent() {
 
                                 <Title level={4}>10.2. Appeals</Title>
                                 <Paragraph>
-                                    If your content is removed and you believe it was done in error, you may appeal by contacting <a href="mailto:appeals@one-night-stand.co" style={{ color: "#FF3A8A" }}>appeals@one-night-stand.co</a> within 30 days.
+                                    If your content is removed and you believe it was done in error, you may appeal by contacting <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>contact@quantumtimes.co.ke</a> within 30 days.
                                 </Paragraph>
                             </div>
 
@@ -469,7 +469,7 @@ export default function UserGeneratedContent() {
                                     We comply with the Digital Millennium Copyright Act (DMCA). If you believe your copyright has been infringed:
                                 </Paragraph>
                                 <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
-                                    <li>Submit a DMCA takedown notice to <a href="mailto:copyright@one-night-stand.co" style={{ color: "#FF3A8A" }}>copyright@one-night-stand.co</a>.</li>
+                                    <li>Submit a DMCA takedown notice to <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>contact@quantumtimes.co.ke</a>.</li>
                                     <li>Include all required elements per 17 U.S.C. § 512(c)(3).</li>
                                     <li>Provide specific identification of the infringing content.</li>
                                 </ul>
@@ -497,7 +497,7 @@ export default function UserGeneratedContent() {
                             <div id="indemnification">
                                 <Title level={2}>15. Indemnification</Title>
                                 <Paragraph>
-                                    You agree to indemnify, defend, and hold harmless One Night Stand, Match Mate Group, Quantum Times Technologies, and their respective officers, directors, employees, agents, and affiliates from and against any claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from:
+                                    You agree to indemnify, defend, and hold harmless One Night Stand: Meet & Date, Match Mate Group (Consumer Social Products), Quantum Times Technologies, and their respective officers, directors, employees, agents, and affiliates from and against any claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from:
                                 </Paragraph>
                                 <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                                     <li>Your violation of this UGC Policy.</li>
@@ -516,16 +516,16 @@ export default function UserGeneratedContent() {
                                 </Paragraph>
                                 <Space orientation="vertical" size="small" style={{ width: "100%" }}>
                                     <Paragraph>
-                                        <Text strong>General Inquiries:</Text> <a href="mailto:legal@one-night-stand.co" style={{ color: "#FF3A8A" }}>legal@one-night-stand.co</a>
+                                        <Text strong>General Inquiries:</Text> <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>contact@quantumtimes.co.ke</a>
                                     </Paragraph>
                                     <Paragraph>
-                                        <Text strong>Safety Concerns:</Text> <a href="mailto:safety@one-night-stand.co" style={{ color: "#FF3A8A" }}>safety@one-night-stand.co</a>
+                                        <Text strong>Safety Concerns:</Text> <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>contact@quantumtimes.co.ke</a>
                                     </Paragraph>
                                     <Paragraph>
-                                        <Text strong>Copyright Issues:</Text> <a href="mailto:copyright@one-night-stand.co" style={{ color: "#FF3A8A" }}>copyright@one-night-stand.co</a>
+                                        <Text strong>Copyright Issues:</Text> <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>contact@quantumtimes.co.ke</a>
                                     </Paragraph>
                                     <Paragraph style={{ marginBottom: 0 }}>
-                                        <Text strong>Appeals:</Text> <a href="mailto:appeals@one-night-stand.co" style={{ color: "#FF3A8A" }}>appeals@one-night-stand.co</a>
+                                        <Text strong>Appeals:</Text> <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>contact@quantumtimes.co.ke</a>
                                     </Paragraph>
                                 </Space>
                             </div>

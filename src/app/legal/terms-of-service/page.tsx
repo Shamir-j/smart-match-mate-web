@@ -66,7 +66,7 @@ export default function TermsOfUse() {
               <div id="ownership">
                 <Title level={2}>2. Ownership and Operation</Title>
                 <Paragraph>
-                  One Night Stand is owned by <Text strong>Match Mate Group (Consumer Social Products)</Text> and developed and maintained by <Text strong>Quantum Times Technologies</Text>.
+                  One Night Stand: Meet & Date ("One Night Stand") is owned by <Text strong>Match Mate Group (Consumer Social Products)</Text> and developed and maintained by <Text strong>Quantum Times Technologies</Text>.
                 </Paragraph>
               </div>
 
@@ -76,7 +76,7 @@ export default function TermsOfUse() {
                 <Paragraph>
                   You must be at least <Text strong>18 years old</Text> to use the Services. By using the Services, you represent and warrant that:
                 </Paragraph>
-               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
+                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                   <li>You can form a binding contract with One Night Stand.</li>
                   <li>You are not a person who is barred from using the Service under the laws of the United States or any other applicable jurisdiction.</li>
                   <li>You will comply with this Agreement and all applicable local, state, national and international laws, rules and regulations.</li>
@@ -96,7 +96,7 @@ export default function TermsOfUse() {
               <div id="conduct">
                 <Title level={2}>5. User Conduct</Title>
                 <Paragraph>You agree to treat other users with courtesy and respect. You agree not to:</Paragraph>
-               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
+                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                   <li>Use the Service for any purpose that is illegal or prohibited by this Agreement.</li>
                   <li>Use the Service for any harmful or nefarious purpose.</li>
                   <li>Use the Service in order to damage One Night Stand.</li>
@@ -125,7 +125,7 @@ export default function TermsOfUse() {
                 <Paragraph>
                   <Text strong>Warranties:</Text> You represent and warrant that:
                 </Paragraph>
-               <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
+                <ul style={{ lineHeight: '1.8', paddingLeft: '30px' }}>
                   <li>You own the Content or have the right to grant the license set forth in this section.</li>
                   <li>The Content does not violate the privacy rights, publicity rights, copyrights, contract rights, or any other rights of any person.</li>
                   <li>The Content is not defamatory, obscene, pornographic, or otherwise offensive.</li>
@@ -171,7 +171,7 @@ export default function TermsOfUse() {
               <div id="intellectual">
                 <Title level={2}>10. Intellectual Property</Title>
                 <Paragraph>
-                  All platform software, trademarks, and branding are the property of Match Mate Group or its licensors.
+                  All platform software, trademarks, and branding are the property of Match Mate Group or its licensors, developed and maintained by Quantum Times Technologies.
                 </Paragraph>
               </div>
 
@@ -211,7 +211,7 @@ export default function TermsOfUse() {
               <div id="contact">
                 <Title level={2}>15. Contact</Title>
                 <Paragraph>
-                  <Text strong>Email:</Text> <a href="mailto:legal@one-night-stand.co" style={{ color: "#FF3A8A" }}>legal@one-night-stand.co</a>
+                  <Text strong>Email:</Text> <a href="mailto:contact@quantumtimes.co.ke" style={{ color: "#FF3A8A" }}>contact@quantumtimes.co.ke</a>
                 </Paragraph>
               </div>
 
